@@ -1,15 +1,73 @@
 @import "variables.css";
 
-.hero {
-    width: 100vw;
-    height: 20vw;
-    background-image: url("../Assets/meeting.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 100% 50%;
-    color: var(--yellow-text);
+div {
+    width: 100%;
+}
+.container {
+    .hero {
+        width: 100vw;
+        height: 20vw;
+        background-image: url("../Assets/meeting.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 100% 50%;
+        color: var(--yellow);
 
-    h1, h2 {
-        text-align: center;
+        h1, h2 {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+        }
+    }
+
+    .line {
+        background-color: var(--yellow);
+        width: 90vw;
+        height: 1vh;
+        margin-top: 4vh;
+        display: flex;
+        justify-self: center;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .mission-vision {
+        display: grid;
+        grid-column: auto auto;
+        grid-row: auto;
+        h2, h3 {
+            color: var(--dark-blue);
+        }
+    }
+
+    .meet-our-experts {
+        .experts {
+            /* width: 1000px;
+            height: 1000px; */
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 30px;
+            .expert {
+                border: 10px;
+                border-style: solid;
+                border-color: var(--dark-blue);
+                border-radius: 10%;
+                background-color: var(--grey);
+                margin: 20px;
+                /* padding: 20px; */
+
+                img {
+                    margin-top: 25px;
+                    border-radius: 50%;
+                    width: 200px;
+                    height: 200px;
+                    object-fit: cover;
+                }
+                p {
+                    padding: 10px;
+                }
+            }
+        }
     }
 }
