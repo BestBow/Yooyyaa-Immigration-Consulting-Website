@@ -1,10 +1,11 @@
 import './App.css'
+import Services from './pages/Services.jsx'
 
 function App() {
 
   return (
     <>
-      this is a plain start.
+      <Services />
     </>
   )
 }
