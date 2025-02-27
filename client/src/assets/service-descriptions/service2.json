@@ -3,6 +3,6 @@
 	"description": "This is a description of service 2 lorem ipsum",
 	"image": {
 		"src": "photo.jpg",
-		"alt": "Service 1"
+		"alt": "Service 2"
 	}
 }

@@ -1,4 +1,4 @@
-import '../App.css'
+import '../styles/Services.module.css'
 
 function Services ()
 {
