@@ -1,0 +1,15 @@
+@import "variables.css";
+
+.hero {
+    width: 100vw;
+    height: 20vw;
+    background-image: url("../Assets/meeting.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 50%;
+    color: var(--yellow-text);
+
+    h1, h2 {
+        text-align: center;
+    }
+}
