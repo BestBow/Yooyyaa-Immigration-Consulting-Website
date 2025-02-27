@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./styles/Contact.module.css";
+import styles from "../styles/Contact.module.css";
 
-const Contact = () => {
+function Contact() {
   return (
     <div className={styles.container}>
       {/* Header */}
@@ -66,6 +66,6 @@ const Contact = () => {
       </footer>
     </div>
   );
-};
+}
 
 export default Contact;
