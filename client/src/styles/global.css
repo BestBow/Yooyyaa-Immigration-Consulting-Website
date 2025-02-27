@@ -3,3 +3,12 @@
     font-weight: 400;
 }
 
+body{
+    margin: 0;
+    padding:0;
+}
+
+.blue-subHeading{
+    color: 003580;
+}
+
