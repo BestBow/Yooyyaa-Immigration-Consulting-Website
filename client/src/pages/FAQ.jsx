@@ -1,5 +1,6 @@
 import React from 'react';
 import FAQAccordion from "../components/FAQAccordion";
+import "tailwindcss";
 
 export default function FAQ() {
     
@@ -30,10 +31,15 @@ let faqInfo = [
 ];
 
 return (
-    <>
-    <h1>FAQ</h1>
-    <FAQAccordion faq={faqInfo} />
-    </>
+    <div className="bg-contain bg-[url('../assets/question_marks_background.jpg')] container mx-auto px-4 py-12">
+    	<h1 className='flex justify-center'>Frequently Asked Questions</h1>
+     	{/*Header */}
+			
+			<FAQAccordion faq={faqInfo} />
+
+    	{/*Footer*/}
+    </div>
+
 );
 
 }
