@@ -2,6 +2,10 @@
 Desktop First Approach
 */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #root{
     box-sizing: border-box;
     margin: 0;
