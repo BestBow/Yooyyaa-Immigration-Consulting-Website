@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/Contact.module.css";
+import styles from "../styles/Contact.module.css"; 
 
 function Contact() {
   return (
@@ -26,7 +26,9 @@ function Contact() {
       {/* Form Section */}
       <section className={styles.formContainer}>
         <h3 className={styles.subHeading}>WE ARE HERE TO HELP</h3>
-        <p className={styles.text}>Immigration process can be hectic. <strong>WE ARE HERE TO MAKE IT EASY.</strong></p>
+        <p className={styles.text}>
+          Immigration process can be hectic. <strong>WE ARE HERE TO MAKE IT EASY.</strong>
+        </p>
         <form className={styles.form}>
           <input type="text" placeholder="NAME" className={styles.input} />
           <input type="email" placeholder="EMAIL" className={styles.input} />
@@ -62,7 +64,9 @@ function Contact() {
           <a href="#">Privacy Policy</a>
           <a href="#">Terms & Conditions</a>
         </div>
-        <p className={styles.copyright}>&copy; 2025 Yooyaa Immigration Consultants. All rights reserved.</p>
+        <p className={styles.copyright}>
+          &copy; 2025 Yooyaa Immigration Consultants. All rights reserved.
+        </p>
       </footer>
     </div>
   );
