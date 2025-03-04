@@ -1,4 +1,7 @@
-import '../styles/Services.module.css'
+import 'tailwindcss';
+import '../styles/global.css';
+
+//import '../styles//Services.module.css'
 
 function Services ()
 {
@@ -24,25 +27,37 @@ function Services ()
 
 export default function Page ()
 {
-  	return (
-			<>
-				<h1 className='page-heading'>SERVICES<br/> OFFERED</h1>
+	return (
+		<>
+			<div className="container mx-auto flex flex-col items-center">
 				
-				<h2>SERVICES</h2>
+				{/* Heading banner */}
+				<div className="flex flex-col items-center">
+					<h1 className='text-3xl'>SERVICES<br/> OFFERED</h1>
+				</div>
 				
-				{/* TODO: Horizontal line */ }
 				
+				{/* Horizontal line */ }
+				<h2 className="text-center">SERVICES</h2>
+				
+				<span className="horizontal-line"></span>
+				
+				<div className=""> 
 				{/* 
 					TODO: Services here must be anchor links and 
 					should scroll to the respective service page
 				*/ }
-				<p>Service 1 | Service 2 | Service 3 | Service 4</p>
+					<p className="text-center">Service 1 | Service 2 | Service 3 | Service 4</p>
+					
+					<div className="service-container "> 
+						{ /* Services */ }
+						<Services />
+					</div>
 				
-				{ /* Services */ }
-				<Services />
-				
+				</div>
 				{ /* TODO: Footer */ }
 				
-			</>
-  	)
+			</div>
+		</>
+	)
 }
