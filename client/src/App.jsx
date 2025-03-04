@@ -1,14 +1,24 @@
-import React from "react"
-import "./styles/global.css"
-export default function App (){
-    return (
-        <>
-        <h1 className="flex items-center bg-blue-500 px-4 py-3 text-white hover:bg-blue-400">Yellow header 1</h1>
-        <h3>Blue Header</h3>
-        <p>Paragraph</p>
-        <button>Hello</button>
-        </>
-    )
-}
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import Testimonials from "./components/Testimonials";
+import CTA from "./components/CTA";
+import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
 
 
+const App = () => {
+  return (
+    <div>
+      <Header />
+      <Hero />
+      <Services />
+      <Testimonials />
+      <CTA />
+      <FAQ />
+      <Footer />
+    </div>
+  );
+};
+
+export default App;
