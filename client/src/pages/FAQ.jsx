@@ -32,7 +32,7 @@ let faqInfo = [
 ];
 
 return (
-    <div className="flex-col justify-center container mx-auto px-4 py-12">
+    <div className=" flex flex-col justify-center container mx-auto px-4 py-12">
     	<h1 className="flex justify-center bg-contain bg-[url('../assets/question_marks_background.jpg')]">Frequently Asked Questions</h1>
      	{/*Header */}
 			
