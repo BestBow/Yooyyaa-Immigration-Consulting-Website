@@ -1,5 +1,7 @@
 import React from "react"
 import "./styles/global.css"
+import Contact from './pages/Contact.jsx'
+
 export default function App (){
     return (
         <>
@@ -7,7 +9,9 @@ export default function App (){
         <h3>Blue Header</h3>
         <p>Paragraph</p>
         <button>Hello</button>
+        <Contact />
         </>
+        
     )
 }
 
