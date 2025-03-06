@@ -1,4 +1,4 @@
-import { useState } from "react";
+/*import { useState } from "react";
 
 const faqs = [
   { question: "Lorem ipsum dolor sit amet?", answer: "Lorem ipsum answer content." },
@@ -25,4 +25,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ;
+export default FAQ; */

@@ -1,16 +1,22 @@
+import React from "react";
+
 const Footer = () => {
-    return (
-      <footer className="bg-blue-900 text-white text-center py-6">
-        <h4 className="font-bold">YOOVYAA IMMIGRATION SERVICES</h4>
-        <p>123 11th Street, Halifax, Nova Scotia A1A 1A1</p>
-        <p>Email: samething@gmail.com | Phone: 902-111-2222</p>
-        <div className="text-sm mt-2">
-          <a href="#" className="mr-4">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-        </div>
-      </footer>
-    );
-  };
-  
-  export default Footer;
-  
+  return (
+    <footer className="footer">
+      <div className="footer-left">
+        <img src="/logo.png" alt="Yooyyaa Immigration Services" className="footer-logo" />
+      </div>
+      <div className="footer-center">
+        <p>123 This Street, Halifax, Nova Scotia, A1A 1A1</p>
+        <p>something@gmail.com</p>
+        <p>902-111-2222</p>
+      </div>
+      <div className="footer-right">
+        <p>Privacy Policy | Terms & Conditions</p>
+        <p>© 2025 Yooyyaa Immigration Consultants. All rights reserved.</p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
