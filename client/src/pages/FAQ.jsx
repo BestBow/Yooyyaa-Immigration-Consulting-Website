@@ -32,18 +32,21 @@ let faqInfo = [
 ];
 
 return (
-    <div className=" flex flex-col justify-center container mx-auto px-4 py-12">
-    	<h1 className="flex justify-center bg-contain bg-[url('../assets/question_marks_background.jpg')]">Frequently Asked Questions</h1>
-     	{/*Header */}
-			
-			<FAQAccordion faq={faqInfo} />
-
-	
-
-		
-    	{/*Footer*/}
-    </div>
-
+    <div className="flex flex-col justify-center w-full px-4 py-12">
+    <h1
+      className="
+        flex 
+        justify-center 
+        bg-[url('../assets/question_marks_background.jpg')] 
+        bg-contain
+        bg-center 
+        w-full 
+      "
+    >
+      Frequently Asked Questions
+    </h1>
+    <FAQAccordion faq={faqInfo} />
+  </div>
 );
 
 }

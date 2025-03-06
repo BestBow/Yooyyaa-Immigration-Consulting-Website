@@ -7,3 +7,7 @@ createRoot(document.getElementById('root')).render(
     <FAQ />
   </StrictMode>,
 )
+
+
+
+
