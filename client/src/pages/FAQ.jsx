@@ -36,7 +36,8 @@ return (
     <h1
       className="
         flex 
-        justify-center 
+        justify-center
+        text-center 
         bg-[url('../assets/question_marks_background.jpg')] 
         bg-contain
         bg-center 
@@ -46,6 +47,7 @@ return (
       Frequently Asked Questions
     </h1>
     <FAQAccordion faq={faqInfo} />
+
   </div>
 );
 

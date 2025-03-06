@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import "../styles/FAQ.module.css";
-
 /*
  Handles the logic for displaying each item in Q&A List, and uses re-rendering to conditonally
  display the answer section. Using the useState hook updatePanel conditionally displays the answer
@@ -54,7 +52,8 @@ export default function FAQAccordion({ faq }) {
 	}
 	
 	return (
-		<div className="allItems">
+		<div className="">
+			<h3 className="text-center">General Questions</h3>
       {faq.map((qna) => (
         <AccordionItem 
           question={qna.question}
@@ -62,6 +61,23 @@ export default function FAQAccordion({ faq }) {
           key={crypto.randomUUID()} // create & pass a unique key for each item
         />
       ))}
+
+
+			<h3 className="text-center">Specific Questions</h3>
+      {faq.map((qna) => (
+        <AccordionItem 
+          question={qna.question}
+          answer={qna.answer}
+          key={crypto.randomUUID()} // create & pass a unique key for each item
+        />
+      ))}
+
+
+
     </div>
-  );
+
+
+
+
+);
 }
