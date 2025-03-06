@@ -29,6 +29,10 @@ button{
     @apply bg-[#FFC700] text-[#294369] text-2xl p-1.5 rounded-xl;
 }
 
+span.horizontal-line {
+	@apply block h-1 w-[90%] bg-[#FFC700] self-center;
+}
+
 /**Tablet-breakpoints **/
 @media (min-width: 768px) and (max-width: 992px){
 
