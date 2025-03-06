@@ -1,9 +1,16 @@
 @import "./variables.css";
 @import "./global.css";
 
-.container {
-    width: 80%;
+*:is(h1, h2, h3, h4, h5, h6) {
+    color: var(--dark-blue);
+    font-weight: 100;
+}
+
+.container { 
+    width: 100vw;
+    position: relative;
     text-align: center;
+
     .hero {
         width: 100%;
         height: 20vw;
@@ -17,13 +24,16 @@
             display: flex;
             justify-content: center;
             align-content: center;
-            text-align: center;
+        }
+         
+        > p {
+            color: var(--yellow);
         }
     }
 
     .line {
         background-color: var(--yellow);
-        width: 90vw;
+        width: 75vw;
         height: 1vh;
         display: flex;
         justify-self: center;
@@ -35,12 +45,14 @@
         display: grid;
         grid-column: auto auto;
         grid-row: auto;
-        h2, h3 {
+        margin-top: 30px;
+        h2, h3, h5 {
             color: var(--dark-blue);
         }
     }
 
     .meet-our-experts {
+        margin-top: 50px;
         .experts {
             /* width: 1000px;
             height: 1000px; */
@@ -67,6 +79,18 @@
                     padding: 10px;
                 }
             }
+        }
+    }
+    .connect{
+        .ready {
+            color: #000000;
+        }
+        
+        button {
+            width: 400px;
+            height: 75px;
+            font-size: 30px;
+            font-weight: 900;
         }
     }
 }
