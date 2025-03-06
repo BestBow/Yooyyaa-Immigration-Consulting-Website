@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/Contact.module.css"; 
+import styles from "../styles/Contact.module.css";
 
 function Contact() {
   return (
@@ -18,17 +18,25 @@ function Contact() {
         </nav>
       </header>
 
-      {/* Contact Section */}
+      {/* Contact Banner */}
       <section className={styles.contactBanner}>
         <h2>GET IN TOUCH</h2>
       </section>
 
+      {/* Section Title */}
+      <h3 className={styles.sectionTitle}>WE ARE HERE TO HELP</h3>
+
       {/* Form Section */}
-      <section className={styles.formContainer}>
-        <h3 className={styles.subHeading}>WE ARE HERE TO HELP</h3>
-        <p className={styles.text}>
-          Immigration process can be hectic. <strong>WE ARE HERE TO MAKE IT EASY.</strong>
-        </p>
+      <section className={styles.formSection}>
+        <div className={styles.formText}>
+          <p className={styles.text}>
+            Immigration process can be hectic. <strong>WE ARE HERE TO MAKE IT EASY.</strong>
+          </p>
+          <p className={styles.description}>
+            Let us know how we can help, and we will get back to you in [TIME] [UNIT]!
+          </p>
+        </div>
+
         <form className={styles.form}>
           <input type="text" placeholder="NAME" className={styles.input} />
           <input type="email" placeholder="EMAIL" className={styles.input} />
@@ -47,23 +55,51 @@ function Contact() {
       {/* Contact Info */}
       <section className={styles.infoSection}>
         <h3>OTHER WAYS TO FIND US</h3>
-        <p>PHONE: <span className={styles.highlight}>+1 902-123-4567</span></p>
-        <p>EMAIL: <span className={styles.highlight}>something@gmail.com</span></p>
-        <p>ADDRESS: <span className={styles.highlight}>123 Imaginary St, Halifax, NS B1H 1Z0</span></p>
+        <div className={styles.infoDivider}></div>
+
+        <div className={styles.infoContainer}>
+          <img src="/yooyaa-logo.png" alt="Yooyaa Logo" className={styles.infoLogo} />
+          <div className={styles.contactDetails}>
+            <p>PHONE: <span className={styles.highlight}>+1 902-123-4567</span></p>
+            <p>EMAIL: <span className={styles.highlight}>something@gmail.com</span></p>
+            <p>ADDRESS: <span className={styles.highlight}>123 Imaginary St, Halifax, NS B1H 1Z0</span></p>
+          </div>
+        </div>
+
+        {/* Map Section */}
+        <div className={styles.mapContainer}>
+          <img src="/map-placeholder.jpg" alt="Map" className={styles.mapImage} />
+        </div>
       </section>
 
       {/* Footer */}
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
           <img src="/logo.png" alt="Logo" className={styles.footerLogo} />
-          <p>123 This Street, Halifax, Nova Scotia A1A 1A1</p>
-          <p>something@gmail.com</p>
-          <p>902-111-2222</p>
+
+          <div className={styles.footerItem}>
+            <span className={styles.footerIcon}>📍</span>
+            <p>123 This Street <br /> Halifax, Nova Scotia <br /> A1A 1A1</p>
+          </div>
+
+          <div className={styles.footerItem}>
+            <span className={styles.footerIcon}>📧</span>
+            <p>something@gmail.com</p>
+          </div>
+
+          <div className={styles.footerItem}>
+            <span className={styles.footerIcon}>📞</span>
+            <p>902-111-2222</p>
+          </div>
         </div>
+
         <div className={styles.footerLinks}>
           <a href="#">Privacy Policy</a>
           <a href="#">Terms & Conditions</a>
         </div>
+
+        <div className={styles.footerLine}></div>
+
         <p className={styles.copyright}>
           &copy; 2025 Yooyaa Immigration Consultants. All rights reserved.
         </p>

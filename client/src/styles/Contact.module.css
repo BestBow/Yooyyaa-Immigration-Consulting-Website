@@ -1,14 +1,13 @@
+@import "tailwindcss"; 
 
-
-@import "tailwindcss";
-/* General Container */
+/* General Layout */
 .container {
-  @apply bg-gray-100 min-h-screen;
+  @apply bg-gray-100 min-h-screen flex flex-col items-center w-full;
 }
 
 /* Header */
 .header {
-  @apply bg-blue-900 text-white py-4 px-6 flex justify-between items-center;
+  @apply bg-blue-900 text-white w-full py-5 px-8 flex justify-between items-center shadow-md;
 }
 
 .logoContainer {
@@ -16,93 +15,133 @@
 }
 
 .logo {
-  @apply h-10 mr-2;
+  @apply h-14 mr-3;
 }
 
 .title {
-  @apply text-xl font-bold;
+  @apply text-xl font-bold uppercase tracking-wide;
 }
 
 .nav {
-  @apply space-x-6;
+  @apply flex space-x-8 text-lg;
 }
 
 .nav a {
-  @apply hover:text-yellow-400;
+  @apply text-white font-semibold hover:text-yellow-400 transition-colors;
 }
 
 .contactBtn {
-  @apply bg-yellow-400 text-blue-900 px-4 py-2 rounded;
+  @apply bg-yellow-400 text-blue-900 px-6 py-3 rounded font-bold hover:bg-yellow-300 transition;
 }
 
 /* Contact Banner */
 .contactBanner {
-  @apply text-center py-16 bg-gradient-to-b from-blue-500 to-blue-300 text-white text-4xl font-bold;
+  @apply flex flex-col items-center justify-center text-center w-full h-[50vh] bg-cover bg-center bg-no-repeat text-yellow-400 text-5xl font-extrabold uppercase relative;
+  background-image: url("/background-image.jpg");
 }
 
-/* Form */
-.formContainer {
-  @apply max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md mt-10 text-center;
+/* Section Title */
+.sectionTitle {
+  @apply text-center text-2xl font-bold text-blue-900 uppercase mt-10;
 }
 
-.subHeading {
-  @apply text-lg font-semibold text-blue-900 mb-4;
+.sectionTitle::after {
+  content: "";
+  @apply block w-40 h-1 bg-yellow-400 mx-auto mt-2;
 }
 
-.text {
-  @apply text-gray-600;
+/* Form Section */
+.formSection {
+  @apply flex flex-col md:flex-row justify-between items-start max-w-5xl mx-auto bg-white p-10 rounded-lg shadow-lg mt-4 w-full border border-gray-300;
+}
+
+.formText {
+  @apply w-1/2 pr-10;
 }
 
 .form {
-  @apply grid grid-cols-1 gap-4;
+  @apply w-1/2 flex flex-col gap-4;
 }
 
-.input {
-  @apply border rounded p-2 w-full;
+.input, .textarea {
+  @apply border border-gray-400 rounded p-3 w-full text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500;
 }
 
 .textarea {
-  @apply border rounded p-2 w-full h-32;
+  @apply h-32;
 }
 
 .submitBtn {
-  @apply w-full mt-4 bg-blue-900 text-white py-2 rounded hover:bg-blue-700;
+  @apply w-full mt-4 bg-yellow-400 text-blue-900 py-3 rounded-lg text-lg font-bold hover:bg-yellow-300 transition;
 }
 
-/* Contact Info */
+/* Contact Info Section */
 .infoSection {
-  @apply mt-10 text-center;
+  @apply mt-16 text-center w-full px-6;
 }
 
-.infoSection h3 {
-  @apply text-lg font-bold text-blue-900;
+.infoDivider {
+  @apply w-60 md:w-96 h-1 bg-yellow-400 mx-auto my-4;
 }
 
-.highlight {
-  @apply font-bold text-blue-700;
+.infoContainer {
+  @apply flex justify-between items-center max-w-5xl mx-auto mt-6;
+}
+
+.infoLogo {
+  @apply h-20;
+}
+
+.contactDetails {
+  @apply text-right text-gray-800;
+}
+
+.contactDetails p {
+  @apply text-lg font-semibold;
+}
+
+/* 🔹 Map Section */
+.mapContainer {
+  @apply max-w-5xl mx-auto mt-6;
+}
+
+.mapImage {
+  @apply w-full h-auto rounded-lg shadow-md;
 }
 
 /* Footer */
 .footer {
-  @apply bg-blue-900 text-white py-6 mt-10 text-center;
+  @apply bg-blue-900 text-white py-12 mt-10 text-center w-full;
 }
 
 .footerContent {
-  @apply max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0;
+  @apply max-w-5xl mx-auto flex flex-row justify-between items-center;
 }
 
 .footerLogo {
-  @apply h-12;
+  @apply h-14;
+}
+
+.footerItem {
+  @apply flex flex-col items-center;
+}
+
+.footerIcon {
+  @apply bg-yellow-400 text-blue-900 p-3 rounded-full;
 }
 
 .footerLinks {
-  @apply mt-4 space-x-4;
+  @apply flex justify-center space-x-6 mt-4;
 }
 
 .footerLinks a {
-  @apply hover:underline;
+  @apply text-white hover:underline;
+}
+
+.footerLine {
+  @apply w-full h-1 bg-yellow-400 mt-4;
 }
 
 .copyright {
-  @apply text-sm mt-2;
+  @apply text-sm mt-6 text-gray-300;
 }
