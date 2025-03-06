@@ -1,29 +1,14 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Contact from "./pages/Contact.jsx"; 
-import "./styles/global.css";
-
-function App() {
-  return (
-    <Router>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact Us</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <Routes>
-        <Route path="/" element={<h1>This is a plain start.</h1>} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
-  );
+import React from "react"
+import "./styles/global.css"
+export default function App (){
+    return (
+        <>
+        <h1 className="flex items-center bg-blue-500 px-4 py-3 text-white hover:bg-blue-400">Yellow header 1</h1>
+        <h3>Blue Header</h3>
+        <p>Paragraph</p>
+        <button>Hello</button>
+        </>
+    )
 }
 
-export default App;
 
