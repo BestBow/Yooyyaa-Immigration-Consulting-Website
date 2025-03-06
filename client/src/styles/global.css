@@ -1,66 +1,80 @@
-/*
-Desktop First Approach
-*/
 
 @import "tailwindcss";
 
-body{
-    @apply bg-white text-black;
-    font-family: "Poppins", sans-serif;
+body {
+  @apply bg-white text-black;
+  font-family: "Poppins", sans-serif;
 }
 
-h1,h2,h3,h5{
-    @apply font-bold;
+h1, h2, h3, h5 {
+  @apply font-bold;
 }
 
-h1{
-    @apply text-[#FFC700] text-4xl;
+h1 {
+  @apply text-[#FFC700] text-4xl;
 }
 
-h3{
-    @apply text-[#003580] text-3xl;  
+h3 {
+  @apply text-[#003580] text-3xl;
 }
 
-p{
-    @apply text-black text-base;
+p {
+  @apply text-black text-base;
 }
 
-button{
-    @apply bg-[#FFC700] text-[#294369] text-2xl p-1.5 rounded-xl;
+button {
+  @apply bg-[#FFC700] text-[#294369] text-2xl p-1.5 rounded-xl;
 }
 
 span.horizontal-line {
-	@apply block h-1 w-[90%] bg-[#FFC700] self-center;
+  @apply block h-1 w-[90%] bg-[#FFC700] self-center;
 }
 
-/**Tablet-breakpoints **/
-@media (min-width: 768px) and (max-width: 992px){
+/* Container for Current Views */
+.container {
+  /* Horizontally at start, vertically center */
+  @apply flex justify-start items-center min-h-screen;
+  /* You can adjust min-h-screen if you don't need full viewport height */
+}
 
-#root{
+/* Tablet Breakpoints */
+@media (min-width: 768px) and (max-width: 992px) {
+
+  #root {
     font-size: 0.95rem;
-}
+  }
 
-h1{
+  h1 {
     font-size: 2.3rem;
-}
+  }
 
-h3{
+  h3 {
     font-size: 1.7rem;
+  }
+
+  /* Optional: Adjust .container for tablet if needed */
+  .container {
+    @apply px-4; /* Example: Add side padding on tablet */
+  }
 }
 
-}
+/* Mobile Breakpoints */
+@media (max-width: 767px) {
 
-/**Mobile-breakpoints **/
-@media (max-width: 767px){
-    #root{
-        font-size: 0.9rem;
-    }
-    h1{
-        font-size: 2.2rem;
-    }
-    
-    h3{
-        font-size: 1.6rem;
-    }
-}
+  #root {
+    font-size: 0.9rem;
+  }
 
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  /* Optional: Adjust .container for mobile if needed */
+  .container {
+    @apply px-2; /* Example: Add smaller side padding on mobile */
+  }
+}
