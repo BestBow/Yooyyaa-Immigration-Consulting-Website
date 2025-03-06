@@ -1,6 +1,8 @@
 import "tailwindcss";
 import '../styles/global.css';
-import '../styles//Services.module.css'
+//import '../styles/Services.module.css'
+
+import BANNER_PHOTO from '../assets/service-banner.jpg';
 
 function Service_Anchors ()
 {
@@ -57,22 +59,50 @@ function Services ()
 
 }
 
+function HeadingBanner ()
+{
+	return (
+		<div className="w-full relative flex flex-col items-center">
+			<div className="w-screen absolute left-1/2 transform -translate-x-1/2">
+				<img
+					src={ BANNER_PHOTO }
+					alt="Banner"
+					className="w-full h-[400px] object-cover"
+				/>
+
+				<div className="
+                    absolute inset-0
+                    bg-gradient-to-t 
+                    from-[#FFFFFF] from-0%
+                    to-[#003580]/25 to-80%
+                ">
+					<h1 className='banner-title absolute inset-x-0 top-1/3 text-center'>
+						SERVICES<br /> OFFERED
+					</h1>
+				</div>
+			</div>
+			{/* Add spacer to maintain layout flow */ }
+			<div className="h-[500px]"></div>
+		</div>
+	);
+}
+
 export default function Page ()
 {
 	return (
 		<>
-			<div className="container mx-auto flex flex-col items-center">
+			{/* TODO: Header */ }
+			
+			<div className="container mx-auto flex flex-col">
 				
 				{/* Heading banner */}
-				<div className="flex flex-col items-center">
-					<h1 className='text-3xl'>SERVICES<br/> OFFERED</h1>
-				</div>
-				
+				<HeadingBanner />
+			
 				
 				{/* Horizontal line */}
-				<h2 className="text-center">SERVICES</h2>
+				<h2 className="section-title text-center m-2">SERVICES</h2>
 				
-				<span className="horizontal-line"></span>
+				<span className="horizontal-line m-5"></span>
 				
 				<div className="max-w-[90%] mx-auto"> 
 				{/* 
