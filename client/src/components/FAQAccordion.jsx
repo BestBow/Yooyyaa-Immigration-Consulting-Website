@@ -14,8 +14,8 @@ let AccordionItem = ({question, answer}) => {
 				<svg
 					onClick={() => updatePanel(!isPanelOpen)}
 					xmlns="http://www.w3.org/2000/svg"
-					width="24"
-					height="24"
+					width="70"
+					height="70"
 					fill="none"
 					viewBox="0 0 24 24"
 					stroke="black"
@@ -23,8 +23,8 @@ let AccordionItem = ({question, answer}) => {
 					<path
 						strokeLinecap="round"
 						strokeLinejoin="round"
-						strokeWidth="1"
-						d={isPanelOpen ? "M5 15l6-6 6 6" : "M19 9l-6 6-6-6"}
+						strokeWidth="3"
+						d={isPanelOpen ? "M5 15l6-7 7 7" : "M19 9l-7 7-7-7"}
 					/>
 				</svg>
 			</div>
@@ -63,6 +63,7 @@ export default function FAQAccordion({ faq }) {
         />
       ))}
 
+		<div className="mt-8"></div>
 
 			<h3 className="text-center">Specific Questions</h3>
 			<span className='horizontal-line mx-auto'></span>

@@ -7,6 +7,8 @@ Desktop First Approach
 body{
     @apply bg-white text-black;
     font-family: "Poppins", sans-serif;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 h1,h2,h3,h5{
