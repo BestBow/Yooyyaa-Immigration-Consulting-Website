@@ -8,9 +8,9 @@ let AccordionItem = ({question, answer}) => {
   const [isPanelOpen, updatePanel] = useState(false); 
 
 	return (
-		<div className="bg-gray-400 z-0 m-2 p-4">
+		<div className="bg-[#D9D9D9] m-5 p-4">
 			<div className="flex items-center justify-between">
-			<div className="text-[#003580]">{question}</div>
+			<div className="text-[#003580] font-semibold">{question}</div>
 				<svg
 					onClick={() => updatePanel(!isPanelOpen)}
 					xmlns="http://www.w3.org/2000/svg"
@@ -52,8 +52,9 @@ export default function FAQAccordion({ faq }) {
 	}
 	
 	return (
-		<div className="">
+		<div className="overflow-auto">
 			<h3 className="text-center">General Questions</h3>
+			<span className='horizontal-line mx-auto'></span>
       {faq.map((qna) => (
         <AccordionItem 
           question={qna.question}
@@ -64,6 +65,7 @@ export default function FAQAccordion({ faq }) {
 
 
 			<h3 className="text-center">Specific Questions</h3>
+			<span className='horizontal-line mx-auto'></span>
       {faq.map((qna) => (
         <AccordionItem 
           question={qna.question}

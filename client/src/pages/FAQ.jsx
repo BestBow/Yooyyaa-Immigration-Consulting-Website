@@ -46,6 +46,10 @@ return (
     >
       Frequently Asked Questions
     </h1>
+    <span className='horizontal-line mx-auto'></span>
+    <p className='text-center'>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
     <FAQAccordion faq={faqInfo} />
 
   </div>
