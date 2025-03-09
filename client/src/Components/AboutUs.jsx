@@ -16,7 +16,7 @@ function AboutUs() {
             <div className="company">
                 <h3>COMAPNY MISSION & VISION</h3>
                 <span className="mobile-line"></span>
-                <div className="mission-vision grid grid-cols-2 gap-4 mr-4 ml-4">
+                <div className="mission-vision grid gap-4 mr-4 ml-4">
                     <div className="mission">
                         <h5>OUR MISSION</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra.</p>

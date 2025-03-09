@@ -43,8 +43,9 @@
 
     .mission-vision {
         display: grid;
-        grid-column: auto auto;
-        grid-row: auto;
+        /* grid-column: auto auto;
+        grid-row: auto; */
+        grid-template-columns: 1fr 1fr;
         margin-top: 30px;
         h2, h3, h5 {
             color: var(--dark-blue);
@@ -144,8 +145,8 @@
             }
             
             .mission-vision {
-                grid-column: auto;
-                grid-row: auto auto;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
             }
         }
     
@@ -153,7 +154,8 @@
             margin-top: 50px;
             .experts {
                 display: grid;
-                grid-template-columns: auto;
+                grid-template-columns: 1fr;
+                grid-row: auto auto;
                 gap: 30px;
                 .expert {
                     border: 10px;
@@ -187,7 +189,7 @@
             }
             
             button {
-                width: 400px;
+                width: 250px;
                 height: 75px;
                 font-size: 30px;
                 font-weight: 900;
