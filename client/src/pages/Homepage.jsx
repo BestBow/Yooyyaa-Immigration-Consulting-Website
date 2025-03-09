@@ -2,26 +2,12 @@ import "tailwindcss";
 import React from "react";
 import "../styles/global.css";
 import greenValley from "../Assets/Green-Valley.jpg";
+import Services from "./Services.jsx";
+
 
 const Homepage = () => {
   return (
-    <div className="font-poppins bg-white text-black">
-      {/* Header */}
-      <header className="flex justify-between items-center px-6 py-4 bg-blue-900 text-white">
-        <div className="flex items-center space-x-4">
-          <img src="/logo.png" alt="Yooyyaa Immigration Services" className="h-12" />
-          <span className="text-yellow-400 font-bold text-lg">YOOYYAA IMMIGRATION SERVICES</span>
-        </div>
-        <nav className="hidden md:flex space-x-6">
-          <a href="#" className="hover:text-yellow-400">HOME</a>
-          <a href="#" className="hover:text-yellow-400">OUR SERVICES</a>
-          <a href="#" className="hover:text-yellow-400">OUR TEAM</a>
-        </nav>
-        <button className="bg-yellow-400 text-blue-900 px-4 py-2 rounded-lg font-bold">
-          GET IN TOUCH
-        </button>
-      </header>
-      
+    <div>
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-b from-blue-900 to-white">
         <h1 className="text-yellow-400 text-4xl font-bold">Home</h1>
@@ -102,15 +88,6 @@ const Homepage = () => {
           </span>
         </div>
       </section>
-      
-      {/* Footer */}
-      <footer className="bg-blue-900 text-white text-center py-8">
-        <img src="/logo.png" alt="Yooyyaa Immigration Services" className="h-12 mx-auto mb-4" />
-        <p>123 This Street, Halifax, Nova Scotia, A1A 1A1</p>
-        <p>something@gmail.com | 902-111-2222</p>
-        <p className="mt-4 text-sm">Privacy Policy | Terms & Conditions</p>
-        <p className="text-sm">© 2025 Yooyyaa Immigration Consultants. All rights reserved.</p>
-      </footer>
     </div>
   );
 };
