@@ -1,8 +1,17 @@
-import React from "react";
-import Homepage from "./Components/Homepage"; // Import Homepage component
+import React from 'react'
+import "./styles/global.css"
+import Homepage from "./Components/Homepage";
+import AboutUs from './Components/AboutUs'
+import Services from './pages/Services.jsx'
 
-const App = () => {
-  return <Homepage />; // Render Homepage component in App
-};
+function App (){
+    return (
+        <>
+          <Homepage />
+          <AboutUs />
+          <Services />
+        </>
+    )
+}
 
-export default App;
+  export default App;
