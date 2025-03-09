@@ -1,12 +1,13 @@
-import './App.css'
+import React from 'react';
+import "./Styles/termsAndPrivacyPolicy.css";
+import TermsAndPrivacy from './Components/termsAndPrivacyPolicy';
 
 function App() {
-
   return (
-    <>
-      this is a plain start.
-    </>
-  )
+    <div className="App flex items-center justify-center h-screen">
+      <TermsAndPrivacy />
+    </div>
+  );
 }
 
-export default App
+export default App;
