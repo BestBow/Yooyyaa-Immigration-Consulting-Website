@@ -1,4 +1,4 @@
-@import "tailwindcss"; 
+@import "tailwindcss";
 
 /* General Layout */
 .container {
@@ -36,8 +36,22 @@
 
 /* Contact Banner */
 .contactBanner {
-  @apply flex flex-col items-center justify-center text-center w-full h-[50vh] bg-cover bg-center bg-no-repeat text-yellow-400 text-5xl font-extrabold uppercase relative;
-  background-image: url("/background-image.jpg");
+  @apply relative flex flex-col items-center justify-center text-center w-full h-[50vh] bg-cover bg-center bg-no-repeat text-yellow-400 text-5xl font-extrabold uppercase;
+  /* Remove the background image here – it will be set inline in JSX */
+}
+
+/* Background image overlay with 20% opacity */
+.backgroundImg {
+  @apply absolute inset-0 bg-cover bg-center;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+/* Blue overlay on top of the background image */
+.blueOverlay {
+  @apply absolute inset-0 bg-blue-900;
+  opacity: 0.2;
+  z-index: 1;
 }
 
 /* Section Title */
@@ -76,13 +90,12 @@
   @apply mt-16 text-center w-full px-6;
 }
 
- 
 .infoContainer {
   @apply flex justify-between items-center max-w-5xl mx-auto mt-6;
 }
 
 .infoLogo {
-  @apply h-20;
+  @apply h-40; /* Increased height from h-20 to h-40 */
 }
 
 .contactDetails {
@@ -130,7 +143,6 @@
 .footerLinks a {
   @apply text-white hover:underline;
 }
-s
 
 .copyright {
   @apply text-sm mt-6 text-gray-300;

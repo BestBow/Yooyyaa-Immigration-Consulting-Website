@@ -3,6 +3,7 @@ import styles from "../styles/Contact.module.css";
 import logo from "../images/logo.png";
 import mapPlaceholder from "../images/map-placeholder.jpg"; 
 import logoWname from "../images/yooyyaaLogo.png";
+import Backgroundimg from "../images/image.png"; 
 
 function Contact() {
   return (
@@ -10,7 +11,7 @@ function Contact() {
       {/* Header */}
       <header className={styles.header}>
         <div className={styles.logoContainer}>
-          <img src= {logo} alt="Logo" className={styles.logo} />
+          <img src={logo} alt="Logo" className={styles.logo} />
           <h1 className={styles.title}>YOOYYAA IMMIGRATION SERVICES</h1>
         </div>
         <nav className={styles.nav}>
@@ -25,13 +26,22 @@ function Contact() {
 
       {/* Contact Banner */}
       <section className={styles.contactBanner}>
-        <h2>GET IN TOUCH</h2>
+        {/* Background image with 20% opacity */}
+        <div
+          className={styles.backgroundImg}
+          style={{ backgroundImage: `url(${Backgroundimg})` }}
+        />
+        {/* Blue overlay matching header blue */}
+        <div className={styles.blueOverlay}></div>
+        <h2 className="relative z-10">GET IN TOUCH</h2>
       </section>
 
       {/* Section Title */}
       <h3 className={styles.sectionTitle}>WE ARE HERE TO HELP</h3>
-      {/*  horizontal-line element will render here */}
-      <span className="horizontal-line"></span>
+      {/* Horizontal line wrapped in a centering container */}
+      <div className="w-full flex justify-center">
+        <span className="horizontal-line"></span>
+      </div>
 
       {/* Form Section */}
       <section className={styles.formSection}>
@@ -70,12 +80,14 @@ function Contact() {
       {/* Contact Info Section */}
       <section className={styles.infoSection}>
         <h3>OTHER WAYS TO FIND US</h3>
-        {/* Global horizontal-line element */}
-        <span className="horizontal-line"></span>
+        {/* Global horizontal-line element wrapped in centering container */}
+        <div className="w-full flex justify-center">
+          <span className="horizontal-line"></span>
+        </div>
 
         <div className={styles.infoContainer}>
           <img
-            src= {logoWname}
+            src={logoWname}
             alt="Yooyaa Logo"
             className={styles.infoLogo}
           />
@@ -98,7 +110,7 @@ function Contact() {
         {/* Map Section */}
         <div className={styles.mapContainer}>
           <img
-            src= {mapPlaceholder}
+            src={mapPlaceholder}
             alt="Map"
             className={styles.mapImage}
           />
@@ -133,8 +145,10 @@ function Contact() {
           <a href="#">Terms & Conditions</a>
         </div>
 
-        {/* Global horizontal-line element */}
-        <span className="horizontal-line"></span>
+        {/* Global horizontal-line element wrapped in centering container */}
+        <div className="w-full flex justify-center">
+          <span className="horizontal-line"></span>
+        </div>
 
         <p className={styles.copyright}>
           &copy; 2025 Yooyaa Immigration Consultants. All rights reserved.
