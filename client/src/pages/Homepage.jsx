@@ -33,7 +33,6 @@ const Homepage = () => {
                 alt={service.name}
                 className="service-img"
               />
-
               <div className="box-header-text">{service.name} </div> 
             </div>      
           ))};
