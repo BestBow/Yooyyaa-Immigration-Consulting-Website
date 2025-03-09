@@ -4,7 +4,7 @@ function TermsAndPrivacy() {
     return (
         <div className="container mx-auto p-4">
             <div className="privacy-title bg-cover bg-center text-white p-10 rounded-lg">
-                <h1 className="text-4xl font-bold">Terms and Poliies</h1>
+                <h1 className="text-4xl font-bold">Terms and Policies</h1>
             </div>
 
             <div className="terms-section mt-8">
