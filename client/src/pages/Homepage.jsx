@@ -2,7 +2,6 @@ import "tailwindcss";
 import React from "react";
 import "../styles/global.css";
 import greenValley from "../Assets/Green-Valley.jpg";
-import Services from "./Services.jsx";
 
 
 const Homepage = () => {
