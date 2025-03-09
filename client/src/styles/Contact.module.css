@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+/* General Layout */
+.container {
+  @apply bg-gray-100 min-h-screen flex flex-col items-center w-full;
+}
+
+/* Contact Banner */
+.contactBanner {
+  @apply relative flex flex-col items-center justify-center text-center w-full h-[50vh] bg-cover bg-center bg-no-repeat text-yellow-400 text-5xl font-extrabold uppercase;
+  /* Remove the background image here – it will be set inline in JSX */
+}
+
+/* Background image overlay with 20% opacity */
+.backgroundImg {
+  @apply absolute inset-0 bg-cover bg-center;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+/* Blue overlay on top of the background image */
+.blueOverlay {
+  @apply absolute inset-0 bg-blue-900;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+/* Section Title */
+.sectionTitle {
+  @apply text-center text-2xl font-bold text-blue-900 uppercase mt-10;
+}
+
+/* Form Section */
+.formSection {
+  @apply flex flex-col md:flex-row justify-between items-start max-w-5xl mx-auto bg-white p-10 rounded-lg shadow-lg mt-4 w-full border border-gray-300;
+}
+
+.formText {
+  @apply w-1/2 pr-10;
+}
+
+.form {
+  @apply w-1/2 flex flex-col gap-4;
+}
+
+.input,
+.textarea {
+  @apply border border-gray-400 rounded p-3 w-full text-gray-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.textarea {
+  @apply h-32;
+}
+
+.submitBtn {
+  @apply w-full mt-4 bg-yellow-400 text-blue-900 py-3 rounded-lg text-lg font-bold hover:bg-yellow-300 transition;
+}
+
+/* Contact Info Section */
+.infoSection {
+  @apply mt-16 text-center w-full px-6;
+}
+
+.infoContainer {
+  @apply flex justify-between items-center max-w-5xl mx-auto mt-6;
+}
+
+.infoLogo {
+  @apply h-40; /* Increased height from h-20 to h-40 */
+}
+
+.contactDetails {
+  @apply text-right text-gray-800;
+}
+
+.contactDetails p {
+  @apply text-lg font-semibold;
+}
+
+/* Map Section */
+.mapContainer {
+  @apply max-w-5xl mx-auto mt-6;
+}
+
+.mapImage {
+  @apply w-full h-auto rounded-lg shadow-md;
+}
