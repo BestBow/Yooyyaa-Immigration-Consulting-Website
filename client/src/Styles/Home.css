@@ -1,0 +1,7 @@
+
+@import "tailwindcss";
+
+.box-header-text{
+    @apply font-bold text-white text-3xl relative z-10;
+
+}

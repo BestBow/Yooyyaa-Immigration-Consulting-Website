@@ -2,6 +2,7 @@ import "tailwindcss";
 import React from "react";
 import "../styles/global.css";
 import greenValley from "../Assets/Green-Valley.jpg";
+import "../styles/Home.css";
 
 
 const Homepage = () => {
@@ -23,7 +24,7 @@ const Homepage = () => {
               alt="Service 1"
               className="absolute inset-0 w-full h-full object-cover rounded-lg z-0"
             />
-            <div className="relative z-10 text-white">SERVICE 1</div>
+            <div className="box-header-text">SERVICE 1</div>
           </div>
           <div className="relative p-8 rounded-lg shadow-md overflow-hidden">
             <img
@@ -31,7 +32,7 @@ const Homepage = () => {
               alt="Service 2"
               className="absolute inset-0 w-full h-full object-cover rounded-lg z-0"
             />
-            <div className="relative z-10 text-white">SERVICE 2</div>
+            <div className="box-header-text">SERVICE 2</div>
           </div>
           <div className="relative p-8 rounded-lg shadow-md overflow-hidden">
             <img
@@ -39,7 +40,7 @@ const Homepage = () => {
               alt="Service 3"
               className="absolute inset-0 w-full h-full object-cover rounded-lg z-0"
             />
-            <div className="relative z-10 text-white">SERVICE 3</div>
+            <div className="box-header-text">SERVICE 3</div>
           </div>
           <div className="relative p-8 rounded-lg shadow-md overflow-hidden">
             <img
@@ -47,7 +48,7 @@ const Homepage = () => {
               alt="Service 4"
               className="absolute inset-0 w-full h-full object-cover rounded-lg z-0"
             />
-            <div className="relative z-10 text-white">SERVICE 4</div>
+            <div className="box-header-text">SERVICE 4</div>
           </div>
         </div>
       </section>
