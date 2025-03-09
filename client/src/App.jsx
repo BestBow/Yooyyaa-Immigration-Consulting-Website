@@ -1,14 +1,15 @@
 import React from 'react'
+import "./styles/global.css"
 import AboutUs from './Components/AboutUs'
-import './Styles/global.css'
+import Services from './pages/Services.jsx'
 
-function App() {
-
-  return (
-    <>
-      <AboutUs />
-    </>
-  )
+function App (){
+    return (
+        <>
+          <AboutUs />
+          <Services />
+        </>
+    )
 }
 
   export default App;
