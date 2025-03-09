@@ -1,18 +1,14 @@
 import React from 'react'
 import "./styles/global.css"
-import AboutUs from './Components/AboutUs'
-import Services from './pages/Services.jsx'
-import Contact from './pages/Contact.jsx'
+import Homepage from "./pages/Homepage.jsx";
 
 function App (){
     return (
         <>
-          <AboutUs />
-          <Services />
-          <Contact/>
+          <Homepage />
         </>
         
     )
 }
 
-  export default App;
+  export default App
