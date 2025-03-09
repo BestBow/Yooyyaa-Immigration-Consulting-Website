@@ -1,0 +1,11 @@
+
+@import "tailwindcss";
+
+.box-header-text{
+    @apply font-bold text-white text-3xl relative z-10;
+
+}
+
+.service-img{
+    @apply absolute inset-0 w-full h-full object-cover rounded-lg z-0;
+}
