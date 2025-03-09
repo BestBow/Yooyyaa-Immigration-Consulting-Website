@@ -6,6 +6,13 @@ import "../styles/Home.css";
 
 
 const Homepage = () => {
+  const servicesList = [
+    {name: "SERVICE 1", image: greenValley },
+    {name: "SERVICE 2", image: greenValley },
+    {name: "SERVICE 3", image: greenValley },
+    {name: "SERVICE 4", image: greenValley },
+  ];
+  
   return (
     <div>
       {/* Hero Section */}
@@ -18,39 +25,19 @@ const Homepage = () => {
         <h2 className="text-2xl font-bold text-blue-900">SERVICES</h2>
         <div className="w-11/12 h-1 bg-yellow-400 mx-auto my-4"></div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-          <div className="relative p-8 rounded-lg shadow-md overflow-hidden">
-            <img
-              src={greenValley}
-              alt="Service 1"
-              className="absolute inset-0 w-full h-full object-cover rounded-lg z-0"
-            />
-            <div className="box-header-text">SERVICE 1</div>
+          {servicesList.map((service)=>(
+
+            <div key={crypto.randomUUID()} className="relative p-8 rounded-lg shadow-md overflow-hidden">
+              <img
+                src={service.image}
+                alt={service.name}
+                className="service-img"
+              />
+
+              <div className="box-header-text">{service.name} </div> 
+            </div>      
+          ))};
           </div>
-          <div className="relative p-8 rounded-lg shadow-md overflow-hidden">
-            <img
-              src={greenValley}
-              alt="Service 2"
-              className="absolute inset-0 w-full h-full object-cover rounded-lg z-0"
-            />
-            <div className="box-header-text">SERVICE 2</div>
-          </div>
-          <div className="relative p-8 rounded-lg shadow-md overflow-hidden">
-            <img
-              src={greenValley}
-              alt="Service 3"
-              className="absolute inset-0 w-full h-full object-cover rounded-lg z-0"
-            />
-            <div className="box-header-text">SERVICE 3</div>
-          </div>
-          <div className="relative p-8 rounded-lg shadow-md overflow-hidden">
-            <img
-              src={greenValley}
-              alt="Service 4"
-              className="absolute inset-0 w-full h-full object-cover rounded-lg z-0"
-            />
-            <div className="box-header-text">SERVICE 4</div>
-          </div>
-        </div>
       </section>
       
       {/* Testimonials Section */}
