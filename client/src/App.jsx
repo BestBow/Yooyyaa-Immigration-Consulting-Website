@@ -9,6 +9,7 @@ import AboutUs from "./components/AboutUs";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
+import TermsandPrivacyPolicy from "./components/TermsAndPrivacyPolicy";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/termsAndPrivacy" element={<TermsandPrivacyPolicy />} />
       </Routes>
       <Footer />
     </Router>
