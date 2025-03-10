@@ -1,5 +1,6 @@
 import '../Styles/AboutUs.css';
 import face from '../Assets/placeholder.jpeg';
+import { Link } from 'react-router-dom';
 // import '../Syles/global.css';
 
 function AboutUs() {
@@ -81,7 +82,7 @@ function AboutUs() {
 
             <div className="connect mb-20">
                 <h2 className="ready mt-20 mb-10 text-3xl">Ready to start your journey? Let's make it happen!</h2>
-                <button type="button" id="get-in-touch">GET IN TOUCH</button>
+                <Link to="/contact"><button type="button" id="get-in-touch">GET IN TOUCH</button></Link>
             </div>
         </div>
     );
