@@ -60,21 +60,6 @@ const Homepage = () => {
           <span className="cta-text">TALK TO US TODAY</span>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="footer">
-        <div className="flex flex-col items-center space-y-3">
-          <h3 className="text-xl font-bold">YOOYYAA</h3>
-          <div className="footer-contact">
-            <p>📍 123 This Street, Halifax, Nova Scotia</p>
-            <p>📧 something@gmail.com</p>
-            <p>📞 902-111-2222</p>
-          </div>
-          <div className="footer-links">
-            <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
