@@ -1,6 +1,9 @@
 import React from "react";
 import "../styles/footer.css";
 import logoWname from "../images/yooyyaaLogo.png";
+import locationIcon from "../Assets/icons/location_on.png";
+import phoneIcon from "../Assets/icons/phone.png";
+import mailIcon from "../Assets/icons/mail.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -19,18 +22,20 @@ const Footer = () => {
         {/* Contact Details */}
         <div className="footer-info">
           <div className="footer-item">
-            <span className="footer-icon">📍</span>
-            <p>
+
+          <img className="bg-[#FFC700] rounded-full" src={locationIcon} />
+
+            <p className="mt-2">
               123 This Street <br /> Halifax, Nova Scotia <br /> A1A 1A1
             </p>
           </div>
           <div className="footer-item">
-            <span className="footer-icon">📧</span>
-            <p>something@gmail.com</p>
+          <img className="bg-[#FFC700] rounded-full" src={mailIcon} />
+            <p className="mt-2">something@gmail.com</p>
           </div>
           <div className="footer-item">
-            <span className="footer-icon">📞</span>
-            <p>902-111-2222</p>
+          <img className="bg-[#FFC700] rounded-full" src={phoneIcon} />
+            <p className="mt-2">902-111-2222</p>
           </div>
         </div>
       </div>

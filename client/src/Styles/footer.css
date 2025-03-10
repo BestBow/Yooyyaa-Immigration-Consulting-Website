@@ -55,3 +55,8 @@
 .copyright {
   @apply text-sm text-gray-300 mt-4 md:mt-0;
 }
+
+
+.footer-item p{
+  @apply text-white;
+}
