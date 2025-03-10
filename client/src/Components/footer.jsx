@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/footer.css";
 import logoWname from "../images/yooyyaaLogo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
       <div className="footer-content">
         {/* Logo */}
         <div className="footer-logo-container">
-          <img src={logoWname} alt="Logo" className="footer-logo" />
+        <Link to="/"> <img src={logoWname} alt="Logo" className="footer-logo" /> </Link>
         </div>
 
         {/* Contact Details */}
