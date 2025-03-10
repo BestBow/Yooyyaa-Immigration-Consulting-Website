@@ -3,10 +3,15 @@ import styles from "../styles/Contact.module.css";
 import mapPlaceholder from "../images/map-placeholder.jpg"; 
 import Backgroundimg from "../images/image.png"; 
 import logoWname from "../images/yooyyaaLogo.png";
+import Header from "../Components/header";
+import Footer from "../Components/footer";
 
 function Contact() {
   return (
     <div className={styles.container}>
+      {/* Header */}
+      <Header />
+
       {/* Contact Banner */}
       <section className={styles.contactBanner}>
         {/* Background image with 20% opacity */}
@@ -87,6 +92,9 @@ function Contact() {
           <img src={mapPlaceholder} alt="Map" className={styles.mapImage} />
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
