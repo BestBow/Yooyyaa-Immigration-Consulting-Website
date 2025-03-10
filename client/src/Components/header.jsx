@@ -1,21 +1,23 @@
 import React from "react";
-import styles from "../styles/header.css";
+import { Link } from "react-router-dom";
+import "../styles/header.css";
 import logo from "../images/logo.png";
 
 const Header = () => {
   return (
-    <header className={styles.header}>
-      <div className={styles.logoContainer}>
-        <img src={logo} alt="Logo" className={styles.logo} />
-        <h1 className={styles.title}>YOOYYAA IMMIGRATION SERVICES</h1>
+    <header className="header">
+      <div className="logo-container">
+        <img src={logo} alt="Logo" className="logo" />
+        <h1 className="title">YOOYYAA IMMIGRATION SERVICES</h1>
       </div>
-      <nav className={styles.nav}>
-        <a href="#">HOME</a>
-        <a href="#">OUR SERVICES</a>
-        <a href="#">OUR TEAM</a>
-        <a href="#" className={styles.contactBtn}>
+      <nav className="nav">
+        <Link to="/">HOME</Link>
+        <Link to="/services">OUR SERVICES</Link>
+        <Link to="/about">OUR TEAM</Link>
+        <Link to="/contact" className="contact-btn">
           GET IN TOUCH
-        </a>
+        </Link>
+        <Link to="/faq">FAQ</Link>
       </nav>
     </header>
   );
