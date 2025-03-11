@@ -1,14 +1,15 @@
 import '../Styles/global.css'
 import '../Styles/AboutUs.css';
 import face from '../Assets/placeholder.jpeg';
-// import '../Syles/global.css';
+import { Link } from 'react-router-dom';
+ import '../styles/global.css';
 
 function AboutUs() {
     return (
         <div className="w-screen container flex flex-col justify-center">
             <div className="hero flex flex-col items-center justify-center">
-                <h1 className="mb-4 banner-title text-4xl font-extrabold">ABOUT US</h1>
-                <p className="text-s"><b>WHO WE ARE & WHAT WE DO</b></p>
+                <h1 className="banner-title ">ABOUT US</h1>
+                <h3 className="text-s"><b>WHO WE ARE & WHAT WE DO</b></h3>
             </div>
 
             <span className="line mt-4 mb-4"></span>
@@ -82,7 +83,7 @@ function AboutUs() {
 
             <div className="connect mb-20">
                 <h2 className="ready mt-20 mb-10 text-3xl">Ready to start your journey? Let's make it happen!</h2>
-                <button type="button" id="get-in-touch">GET IN TOUCH</button>
+                <Link to="/contact"><button type="button" id="get-in-touch">GET IN TOUCH</button></Link>
             </div>
         </div>
     );
