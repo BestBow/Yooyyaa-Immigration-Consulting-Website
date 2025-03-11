@@ -1,15 +1,14 @@
+import BANNER_PHOTO from '../assets/service-banner.jpg';
 import HeadingBanner from '../Components/headingBanner.tsx';
 
 import "tailwindcss";
 import '../styles/global.css';
-//import '../styles/Services.module.css'
 
-import BANNER_PHOTO from '../assets/service-banner.jpg';
+const serviceFiles = import.meta.glob( '../assets/service-descriptions/*.json', { eager: true } )
+
 
 function Service_Anchors ()
-{
-	let serviceFiles = import.meta.glob( '../assets/service-descriptions/*.json', { eager: true } )
-	
+{	
 	return Object.entries( serviceFiles ).map(
 		( [ _, service ], index ) => {
 			return (
@@ -26,9 +25,7 @@ function Service_Anchors ()
 }
 
 function Services ()
-{
-	let serviceFiles = import.meta.glob( '../assets/service-descriptions/*.json', { eager: true } )
-	
+{	
 	return Object.entries( serviceFiles ).map(
 		( [ _, service ] ) => {
 			return (
