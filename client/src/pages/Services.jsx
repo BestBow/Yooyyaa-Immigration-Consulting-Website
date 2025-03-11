@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 import "tailwindcss";
 import '../styles/global.css';
 //import '../styles/Services.module.css'
@@ -9,9 +11,13 @@ function Service_Anchors ()
 	let serviceFiles = import.meta.glob( '../assets/service-descriptions/*.json', { eager: true } )
 	
 	return Object.entries( serviceFiles ).map(
-		( [ _, service ] ) => {
+		( [ _, service ], index ) => {
 			return (
-				<a href={`#${service.title}`} key={ service.title } className="text-lg">
+				<a
+					key={index}
+					href={ `#${ service.title }` }
+					className="text-lg"
+				>
 					&ensp;{ service.title }&ensp;|
 				</a>
 			)
@@ -26,7 +32,7 @@ function Services ()
 	return Object.entries( serviceFiles ).map(
 		( [ _, service ] ) => {
 			return (
-				<section key={ service.title } className="grid grid-cols-2 gap-6 mb-10">
+				<section id={ service.title } className="grid grid-cols-2 gap-6 mb-10">
 					
 					{/* Left column: Image with overlaid title */}
 					<div className="relative mr-5">
@@ -90,9 +96,7 @@ function HeadingBanner ()
 export default function Page ()
 {
 	return (
-		<>
-			{/* TODO: Header */ }
-			
+		<>			
 			<div className="container mx-auto flex flex-col">
 				
 				{/* Heading banner */}
@@ -109,12 +113,11 @@ export default function Page ()
 					TODO: Services here must be anchor links and 
 					should scroll to the respective service page
 				*/}
-					<p className="text-center"><Service_Anchors /></p>
+					<div className="text-center"><Service_Anchors /></div>
 					<div className="service-container my-8"> 
 						<Services />
 					</div>
 				</div>
-				{/* TODO: Footer */}
 				
 			</div>
 		</>
