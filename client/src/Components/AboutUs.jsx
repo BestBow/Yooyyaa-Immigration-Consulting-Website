@@ -4,9 +4,9 @@ import face from '../Assets/placeholder.jpeg';
 
 function AboutUs() {
     return (
-        <div className="container mt-10 flex flex-col justify-center">
+        <div className="w-screen container flex flex-col justify-center">
             <div className="hero flex flex-col items-center justify-center">
-                <h1 className="mb-4 text-4xl font-extrabold">ABOUT US</h1>
+                <h1 className="mb-4 banner-title text-4xl font-extrabold">ABOUT US</h1>
                 <p className="text-s"><b>WHO WE ARE & WHAT WE DO</b></p>
             </div>
 
@@ -71,7 +71,7 @@ function AboutUs() {
             </div>
 
             <div className="why-us space-y-4 flex flex-col">
-                <h2>WHY CHOOSE US</h2>
+                <h3>WHY CHOOSE US</h3>
                 <span className="line mt-4 mb-4"></span>
                 <p>✅ <b>Licensed & Certified Experts – Lorem ipsum dolor sit amet, consectetur adipiscing elit</b></p>
                 <p>🌍 <b>Global Reach – Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b></p>
