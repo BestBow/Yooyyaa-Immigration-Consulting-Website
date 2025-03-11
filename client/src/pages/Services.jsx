@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import HeadingBanner from '../Components/headingBanner.tsx';
 
 import "tailwindcss";
 import '../styles/global.css';
@@ -65,33 +65,6 @@ function Services ()
 
 }
 
-function HeadingBanner ()
-{
-	return (
-		<div className="w-full relative flex flex-col items-center">
-			<div className="w-screen absolute left-1/2 transform -translate-x-1/2">
-				<img
-					src={ BANNER_PHOTO }
-					alt="Banner"
-					className="w-full h-[400px] object-cover"
-				/>
-
-				<div className="
-                    absolute inset-0
-                    bg-gradient-to-t 
-                    from-[#FFFFFF] from-0%
-                    to-[#003580]/25 to-80%
-                ">
-					<h1 className='banner-title absolute inset-x-0 top-1/3 text-center'>
-						SERVICES<br /> OFFERED
-					</h1>
-				</div>
-			</div>
-			{/* Add spacer to maintain layout flow */ }
-			<div className="h-[500px]"></div>
-		</div>
-	);
-}
 
 export default function Page ()
 {
@@ -100,7 +73,7 @@ export default function Page ()
 			<div className="container mx-auto flex flex-col">
 				
 				{/* Heading banner */}
-				<HeadingBanner />
+				{ HeadingBanner( "SERVICES<br/>OFFERED", BANNER_PHOTO ) }
 			
 				
 				{/* Horizontal line */}
