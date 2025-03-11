@@ -1,3 +1,4 @@
+import '../Styles/global.css'
 import '../Styles/AboutUs.css';
 import face from '../Assets/placeholder.jpeg';
 // import '../Syles/global.css';
@@ -14,7 +15,7 @@ function AboutUs() {
             <p id="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             
             <div className="company">
-                <h3>COMAPNY MISSION & VISION</h3>
+                <h3 class="pr-2 pl-2">COMAPNY MISSION & VISION</h3>
                 <span className="mobile-line"></span>
                 <div className="mission-vision grid gap-4 mr-4 ml-4">
                     <div className="mission">
