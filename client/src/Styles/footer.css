@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+/* Footer */
+.footer {
+  @apply bg-blue-900 text-white py-12 mt-10 text-center w-full;
+}
+
+.footerContent {
+  @apply max-w-5xl mx-auto flex flex-row justify-between items-center;
+}
+
+.infoLogo {
+  @apply h-40;
+}
+
+.footerItem {
+  @apply flex flex-col items-center;
+}
+
+.footerIcon {
+  @apply bg-yellow-400 text-blue-900 p-3 rounded-full;
+}
+
+.footerLinks {
+  @apply flex justify-center space-x-6 mt-4;
+}
+
+.footerLinks a {
+  @apply text-white hover:underline;
+}
+
+.copyright {
+  @apply text-sm mt-6 text-gray-300;
+}
