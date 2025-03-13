@@ -56,7 +56,7 @@
         padding: 20px 50px;
         .experts {
             display: grid;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: auto;
             gap: 30px;
             .expert {
                 border: 10px;
@@ -149,6 +149,7 @@
     
         .meet-our-experts {
             margin-top: 50px;
+
             .experts {
                 display: grid;
                 grid-template-columns: 1fr;
@@ -180,6 +181,7 @@
             font-size: 40px;
             font-weight: bolder;
         }
+
         .connect{
             .ready {
                 color: #000000;
