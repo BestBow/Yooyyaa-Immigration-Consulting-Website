@@ -1,30 +1,42 @@
 @import "tailwindcss";
 
-/* Navbar */
+/* NAVBAR */
 .header {
-  @apply bg-blue-900 text-white w-full py-5 px-8 flex justify-between items-center shadow-md;
+  /* Horizontal layout with space between the brand and nav */
+  @apply bg-blue-900 text-white w-full py-4 px-8 flex items-center justify-between shadow-md;
 }
 
 .logo-container {
+  /* Keeps the logo and title on the same line */
   @apply flex items-center space-x-3;
 }
 
 .logo {
-  @apply h-14 brightness-125 contrast-125;
+  /* Preserve the original logo color and size */
+  @apply h-16;
 }
 
 .title {
-  @apply text-xl font-bold uppercase tracking-wide text-white;
+  /* 2 points smaller than before, now using yellow for the text */
+  @apply text-lg font-bold uppercase tracking-wide text-yellow-400;
 }
 
 .nav {
-  @apply flex space-x-8 text-lg;
+  /* Navigation items on the same row, with smaller text and uppercase */
+  @apply flex items-center space-x-8 text-sm uppercase;
 }
 
 .nav a {
-  @apply text-white font-semibold hover:text-yellow-400 transition-colors;
+  /* All nav texts bold and white by default */
+  @apply text-white font-bold hover:text-yellow-400 transition-colors;
+}
+
+/* Specific override for contact button inside nav */
+.nav .contact-btn {
+  @apply text-blue-900 font-bold;
 }
 
 .contact-btn {
-  @apply bg-yellow-400 text-blue-900 px-6 py-2 rounded-lg font-bold hover:bg-yellow-300 transition;
+  /* CTA button with yellow background and blue text */
+  @apply bg-yellow-400 px-6 py-2 rounded-lg font-bold hover:bg-yellow-300 transition;
 }

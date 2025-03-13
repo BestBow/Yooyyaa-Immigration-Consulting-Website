@@ -2,61 +2,74 @@
 
 /* Footer */
 .footer {
+  /* Main footer container with background and spacing */
   @apply bg-blue-900 text-white py-12 mt-10 text-center w-full;
 }
 
 /* Top Section */
 .footer-content {
+  /* Flex container that accommodates both mobile and desktop layouts */
   @apply max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0;
 }
 
-/* Logo */
+/* Logo Container */
 .footer-logo-container {
+  /* Center the logo on mobile; left or center on desktop as needed */
   @apply flex flex-col items-center;
 }
 
 .footer-logo {
-  @apply h-20; /* Reduced logo size for better spacing */
+  /* Adjust logo size for a prominent look */
+  @apply h-28;
 }
 
-/* Contact Info */
+/* Contact Info Container */
 .footer-info {
+  /* Horizontal spacing for contact items on desktop, vertical on mobile */
   @apply flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-12;
 }
 
 .footer-item {
+  /* Center each contact item and set a comfortable text size */
   @apply flex flex-col items-center text-lg;
 }
 
+/* If you want to keep a standard class for icons, you could use it here,
+   but the inline Tailwind classes on the <img> in JSX also work fine. */
 .footer-icon {
   @apply bg-yellow-400 text-blue-900 p-3 rounded-full mb-2;
 }
 
 /* Horizontal Line */
 .footer-divider {
+  /* A horizontal divider that spans most of the footer width */
   @apply w-10/12 h-1 bg-yellow-400 mx-auto my-6;
 }
 
 /* Bottom Section */
 .footer-bottom {
+  /* Flexible container for links and copyright */
   @apply max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center;
 }
 
 /* Links */
 .footer-links {
-  @apply flex space-x-4 text-lg;
+  /* Group footer links together with space in between */
+  @apply flex space-x-8 text-lg;
 }
 
 .footer-links a {
+  /* Make links stand out and add a hover underline */
   @apply text-white font-semibold hover:underline;
 }
 
 /* Copyright */
 .copyright {
+  /* Subtle text color and spacing adjustment for copyright */
   @apply text-sm text-gray-300 mt-4 md:mt-0;
 }
 
-
-.footer-item p{
+/* Ensure footer text is consistently white where needed */
+.footer-item p {
   @apply text-white;
 }
