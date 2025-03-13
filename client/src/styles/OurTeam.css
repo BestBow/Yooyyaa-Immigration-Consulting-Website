@@ -146,8 +146,6 @@
         }
     
         .meet-our-experts {
-            margin-top: 50px;
-
             .experts {
                 display: grid;
                 grid-template-columns: 1fr;

@@ -30,8 +30,8 @@ function AboutUs() {
                 </div>
             </div>
 
-            <div className="meet-our-experts flex flex-col items-center mb-20">
-                <h3>MEET OUR EXPERT</h3>
+            <div className="meet-our-experts flex flex-col items-center mb-10">
+                <h3 className="mt-10">MEET OUR EXPERT</h3>
                 <span className="line mt-4 mb-4"></span>
                 <div className="experts items-center">
                     <div className="expert flex flex-col items-center w-100" id="expert1">
