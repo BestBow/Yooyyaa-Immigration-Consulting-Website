@@ -65,6 +65,7 @@
                 border-radius: 10%;
                 background-color: var(--grey);
                 margin: 20px;
+                width: 1500;
 
                 img {
                     margin-top: 25px;
@@ -80,9 +81,6 @@
         }
     }
     .connect{
-        .ready {
-            color: #000000;
-        }
         
         button {
             width: 400px;
@@ -187,7 +185,7 @@
                 color: #000000;
             }
             
-            button {
+            #get-in-touch {
                 width: 250px;
                 height: 75px;
                 font-size: 30px;

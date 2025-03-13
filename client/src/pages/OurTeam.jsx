@@ -34,7 +34,7 @@ function AboutUs() {
                 <h3>MEET OUR EXPERT</h3>
                 <span className="line mt-4 mb-4"></span>
                 <div className="experts items-center">
-                    <div className="expert flex flex-col items-center w-125" id="expert1">
+                    <div className="expert flex flex-col items-center w-100" id="expert1">
                         <img src={face} alt="one of our consultants"/>
                         <p><b>John Doe, RCIC #123456<br />
                         Senior Immigration Consultant</b><br />
