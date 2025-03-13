@@ -21,8 +21,9 @@ const Footer = () => {
         {/* Contact Details */}
         <div className="footer-info">
           <div className="footer-item">
-            {/* Icon with yellow background and rounded corners */}
-            <img className="bg-[#FFC700] p-3 rounded-full" src={locationIcon} alt="Location" />
+            <div className="footer-icon">
+              <img src={locationIcon} alt="Location" className="h-6 w-6" />
+            </div>
             <p className="mt-2">
               123 This Street <br />
               Halifax, Nova Scotia <br />
@@ -30,17 +31,21 @@ const Footer = () => {
             </p>
           </div>
           <div className="footer-item">
-            <img className="bg-[#FFC700] p-3 rounded-full" src={mailIcon} alt="Email" />
+            <div className="footer-icon">
+              <img src={mailIcon} alt="Email" className="h-6 w-6" />
+            </div>
             <p className="mt-2">something@gmail.com</p>
           </div>
           <div className="footer-item">
-            <img className="bg-[#FFC700] p-3 rounded-full" src={phoneIcon} alt="Phone" />
+            <div className="footer-icon">
+              <img src={phoneIcon} alt="Phone" className="h-6 w-6" />
+            </div>
             <p className="mt-2">902-111-2222</p>
           </div>
         </div>
       </div>
 
-      {/* Horizontal Line */}
+      {/* Horizontal Divider */}
       <div className="footer-divider"></div>
 
       {/* Bottom Section - Links & Copyright */}

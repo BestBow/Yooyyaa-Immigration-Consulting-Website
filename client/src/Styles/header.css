@@ -2,32 +2,32 @@
 
 /* NAVBAR */
 .header {
-  /* Horizontal layout with space between the brand and nav */
-  @apply bg-blue-900 text-white w-full py-4 px-8 flex items-center justify-between shadow-md;
+  /* On mobile, flex-column with centered items; on md+ screens, flex-row */
+  @apply bg-blue-900 text-white w-full py-4 px-8 flex flex-col md:flex-row items-center justify-between shadow-md;
 }
 
 .logo-container {
-  /* Keeps the logo and title on the same line */
-  @apply flex items-center space-x-3;
+  /* Logo and title in a row; full width on mobile so they have space */
+  @apply flex items-center space-x-3 w-full md:w-auto;
 }
 
 .logo {
-  /* Preserve the original logo color and size */
+  /* Preserve original logo size */
   @apply h-16;
 }
 
 .title {
-  /* 2 points smaller than before, now using yellow for the text */
-  @apply text-lg font-bold uppercase tracking-wide text-yellow-400;
+  /* On mobile, slightly smaller text; yellow to match the header button */
+  @apply text-base md:text-lg font-bold uppercase tracking-wide text-yellow-400;
 }
 
 .nav {
-  /* Navigation items on the same row, with smaller text and uppercase */
-  @apply flex items-center space-x-8 text-sm uppercase;
+  /* Flex container with centered items; ensures all nav links (including the button) align on the same line */
+  @apply flex flex-wrap items-center justify-center space-x-4 md:space-x-8 text-xs md:text-sm uppercase;
 }
 
 .nav a {
-  /* All nav texts bold and white by default */
+  /* All nav links bold and white by default, with a hover effect */
   @apply text-white font-bold hover:text-yellow-400 transition-colors;
 }
 
