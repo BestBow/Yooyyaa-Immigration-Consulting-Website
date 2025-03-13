@@ -8,8 +8,8 @@ function AboutUs() {
     return (
         <div className="w-screen container flex flex-col justify-center">
             <div className="hero flex flex-col items-center justify-center">
-                <h1 className="banner-title ">ABOUT US</h1>
-                <h3 className="text-s"><b>WHO WE ARE & WHAT WE DO</b></h3>
+                <h1 className="banner-title">ABOUT US</h1>
+                <h3 className="text-s "><b>WHO WE ARE & WHAT WE DO</b></h3>
             </div>
 
             <span className="line mt-4 mb-4"></span>

@@ -1,35 +1,21 @@
 @import "./variables.css";
 @import "./global.css";
 
-<<<<<<< HEAD
 *:is(h1, h2, h3, h4, h5, h6) {
     color: var(--dark-blue);
     font-weight: bolder;
 }
-=======
->>>>>>> develop
 
 .container { 
     width: 100vw;
     position: relative;
     text-align: center;
-<<<<<<< HEAD
     margin: 0 auto;
 
     .hero {
         width: 100vw;
         height: 30vw;
         background-image: url("../Assets/meeting.png");
-=======
-    padding:0;
-
-
-    .hero {
-        width: 100vw;
-        min-width: 100%;
-        height: 20vw;
-        background-image: url("../Assets/boathouse.jpg");
->>>>>>> develop
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 100% 50%;
@@ -116,11 +102,7 @@
         .hero {
             width: 100vw;
             height: 75vw;
-<<<<<<< HEAD
             background-image: url("../Assets/meeting.png");
-=======
-            background-image: url("../Assets/boathouse.jpg");
->>>>>>> develop
             background-repeat: no-repeat;
             background-size: cover;
             background-position: 100% 50%;

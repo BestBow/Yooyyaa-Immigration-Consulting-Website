@@ -5,7 +5,7 @@ import "./styles/global.css";
 import Header from "./components/header";
 import Footer from "./Components/footer";
 import Homepage from "./pages/Homepage";
-import AboutUs from "./components/AboutUs";
+import AboutUs from "./Components/AboutUs";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
