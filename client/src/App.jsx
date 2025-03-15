@@ -26,6 +26,23 @@ function App() {
       <Footer />
     </Router>
   );
+function App() {
+  return (
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/termsAndPrivacy" element={<TermsandPrivacyPolicy />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }
 
-  export default App
+}
+
+export default App;
