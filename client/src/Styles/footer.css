@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* Footer */
+.footer {
+  @apply bg-blue-900 text-white py-12 mt-10 text-center w-full;
+}
+
+/* Top Section */
+.footer-content {
+  @apply max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0;
+}
+
+/* Logo */
+.footer-logo-container {
+  @apply flex flex-col items-center;
+}
+
+.footer-logo {
+  @apply h-20; /* Reduced logo size for better spacing */
+}
+
+/* Contact Info */
+.footer-info {
+  @apply flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-12;
+}
+
+.footer-item {
+  @apply flex flex-col items-center text-lg;
+}
+
+.footer-icon {
+  @apply bg-yellow-400 text-blue-900 p-3 rounded-full mb-2;
+}
+
+/* Horizontal Line */
+.footer-divider {
+  @apply w-10/12 h-1 bg-yellow-400 mx-auto my-6;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  @apply max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center;
+}
+
+/* Links */
+.footer-links {
+  @apply flex space-x-4 text-lg;
+}
+
+.footer-links a {
+  @apply text-white font-semibold hover:underline;
+}
+
+/* Copyright */
+.copyright {
+  @apply text-sm text-gray-300 mt-4 md:mt-0;
+}
+
+
+.footer-item p{
+  @apply text-white;
+}

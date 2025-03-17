@@ -3,6 +3,13 @@
 # This specific template is located at:
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/npm.gitlab-ci.yml
 
+testJob:
+  stage: test
+  script:
+    - echo "Dummy job for pipeline status"
+  rules:
+    - when: always
+
 publish:
   image: node:latest
   stage: deploy

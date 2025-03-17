@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* Navbar */
+.header {
+  @apply bg-blue-900 text-white w-full py-5 px-8 flex justify-between items-center shadow-md;
+}
+
+.logo-container {
+  @apply flex items-center space-x-3;
+}
+
+.logo {
+  @apply h-14 brightness-125 contrast-125;
+}
+
+.title {
+  @apply text-xl font-bold uppercase tracking-wide text-white;
+}
+
+.nav {
+  @apply flex space-x-8 text-lg;
+}
+
+.nav a {
+  @apply text-white font-semibold hover:text-yellow-400 transition-colors;
+}
+
+.contact-btn {
+  @apply bg-yellow-400 text-blue-900 px-6 py-2 rounded-lg font-bold hover:bg-yellow-300 transition;
+}
