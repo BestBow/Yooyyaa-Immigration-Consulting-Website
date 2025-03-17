@@ -1,50 +1,55 @@
 @import "tailwindcss";
 
-/* Footer */
+/* FOOTER */
+
+/* Footer Container */
 .footer {
-  @apply bg-blue-900 text-white py-12 mt-10 text-center w-full;
+  /* Reduced vertical padding and top margin for a shorter footer */
+  @apply bg-blue-900 text-white py-2 md:py-3 mt-2 md:mt-3 text-center w-full;
 }
 
 /* Top Section */
 .footer-content {
-  @apply max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0;
+  @apply max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-1 md:space-y-1;
 }
 
-/* Logo */
+/* Logo Container */
 .footer-logo-container {
   @apply flex flex-col items-center;
 }
 
 .footer-logo {
-  @apply h-20; /* Reduced logo size for better spacing */
+  /* Increased logo size: 2 sizes up from previous */
+  @apply h-32 md:h-36;
 }
 
-/* Contact Info */
+/* Contact Info Container */
 .footer-info {
-  @apply flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-12;
+  @apply flex flex-col md:flex-row space-y-1 md:space-y-0 md:space-x-2 lg:space-x-4;
 }
 
 .footer-item {
-  @apply flex flex-col items-center text-lg;
+  @apply flex flex-col items-center text-xs md:text-sm;
 }
 
+/* Icon styling: using the same yellow as header button with round icons */
 .footer-icon {
-  @apply bg-yellow-400 text-blue-900 p-3 rounded-full mb-2;
+  @apply bg-yellow-400 text-blue-900 p-1 rounded-full;
 }
 
-/* Horizontal Line */
+/* Horizontal Divider */
 .footer-divider {
-  @apply w-10/12 h-1 bg-yellow-400 mx-auto my-6;
+  @apply w-10/12 h-1 bg-yellow-400 mx-auto my-1 md:my-2;
 }
 
-/* Bottom Section */
+/* Bottom Section (single column, centered) */
 .footer-bottom {
-  @apply max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center;
+  @apply max-w-4xl mx-auto flex flex-col items-center space-y-1;
 }
 
-/* Links */
+/* Footer Links */
 .footer-links {
-  @apply flex space-x-4 text-lg;
+  @apply flex space-x-2 md:space-x-4 text-xs md:text-sm;
 }
 
 .footer-links a {
@@ -53,10 +58,10 @@
 
 /* Copyright */
 .copyright {
-  @apply text-sm text-gray-300 mt-4 md:mt-0;
+  @apply text-xs md:text-sm text-gray-300;
 }
 
-
-.footer-item p{
+/* Ensure footer text remains white */
+.footer-item p {
   @apply text-white;
 }
