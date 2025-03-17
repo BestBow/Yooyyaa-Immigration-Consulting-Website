@@ -79,10 +79,8 @@ export default function Page ()
 				<span className="horizontal-line m-5"></span>
 				
 				<div className="max-w-[90%] mx-auto"> 
-				{/* 
-					TODO: Services here must be anchor links and 
-					should scroll to the respective service page
-				*/}
+					
+				{/* Services */}
 					<div className="text-center"><Service_Anchors /></div>
 					<div className="service-container my-8"> 
 						<Services />
