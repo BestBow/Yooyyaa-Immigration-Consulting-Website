@@ -26,15 +26,16 @@ function useWindowWidth ()
 function ServiceAnchorLinks ()
 {
 	return Object.entries( serviceFiles ).map(
-		( [ _, service ], index ) =>
+		( [ _, service ], index ) => 
 		{
+			const isLastItem = index === Object.entries(serviceFiles).length - 1;
 			return (
 				<a
 					key={ index }
 					href={ `#${ service.title }` }
 					className="text-lg"
 				>
-					&ensp;{ service.title }&ensp;|
+					{ service.title }{ !isLastItem && <>&ensp;|&ensp;</> }
 				</a>
 			);
 		}
