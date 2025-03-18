@@ -5,7 +5,7 @@ import "./Styles/global.css";
 import Header from "./Components/header";
 import Footer from "./Components/footer";
 import Homepage from "./pages/Homepage";
-import AboutUs from "./components/AboutUs";
+import OurTeam from "./pages/OurTeam";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
@@ -17,7 +17,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/about" element={<AboutUs />} />
+        <Route path="/about" element={<OurTeam />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/faq" element={<FAQ />} />
