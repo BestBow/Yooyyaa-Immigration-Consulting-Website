@@ -51,8 +51,7 @@ const Footer = () => {
       {/* Bottom Section - Links & Copyright */}
       <div className="footer-bottom">
         <div className="footer-links">
-          <Link to="/privacy">Privacy Policy</Link>
-          <Link to="/terms">Terms &amp; Conditions</Link>
+          <Link to="/termsAndPrivacy">Terms and Privacy Policy</Link>
         </div>
         <p className="copyright">
           &copy; 2025 Yooyyaa Immigration Consultants. All rights reserved.
