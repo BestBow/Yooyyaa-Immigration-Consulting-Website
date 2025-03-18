@@ -1,122 +1,168 @@
+import BANNER_PHOTO from '../assets/service-banner.jpg';
+import HeadingBanner from '../Components/headingBanner.tsx';
+import { useState, useEffect } from 'react';
+
 import "tailwindcss";
 import '../styles/global.css';
-//import '../styles/Services.module.css'
 
-import BANNER_PHOTO from '../assets/service-banner.jpg';
+const serviceFiles = import.meta.glob( '../assets/service-descriptions/*.json', { eager: true } );
+const MOBILE_BREAKPOINT = 768;
 
-function Service_Anchors ()
+// Track viewport width
+function useWindowWidth ()
 {
-	let serviceFiles = import.meta.glob( '../assets/service-descriptions/*.json', { eager: true } )
-	
+	const [ width, setWidth ] = useState( window.innerWidth );
+
+	useEffect( () =>
+	{
+		const handleResize = () => setWidth( window.innerWidth );
+		window.addEventListener( 'resize', handleResize );
+		return () => window.removeEventListener( 'resize', handleResize );
+	}, [] );
+
+	return width;
+}
+
+function ServiceAnchorLinks ()
+{
 	return Object.entries( serviceFiles ).map(
-		( [ _, service ] ) => {
+		( [ _, service ], index ) => 
+		{
+			const isLastItem = index === Object.entries(serviceFiles).length - 1;
 			return (
-				<a href={`#${service.title}`} key={ service.title } className="text-lg">
-					&ensp;{ service.title }&ensp;|
+				<a
+					key={ index }
+					href={ `#${ service.title }` }
+					className="text-lg"
+				>
+					{ service.title }{ !isLastItem && <>&ensp;|&ensp;</> }
 				</a>
-			)
+			);
 		}
-	)
+	);
 }
 
 function Services ()
 {
-	let serviceFiles = import.meta.glob( '../assets/service-descriptions/*.json', { eager: true } )
-	
+	const windowWidth = useWindowWidth();
+	const isMobile = windowWidth < MOBILE_BREAKPOINT;
+
 	return Object.entries( serviceFiles ).map(
-		( [ _, service ] ) => {
-			return (
-				<section key={ service.title } className="grid grid-cols-2 gap-6 mb-10">
-					
-					{/* Left column: Image with overlaid title */}
-					<div className="relative mr-5">
-						<img 
-							src={service.image.src} 
-							alt={service.image.alt} 
-							className="w-full h-full object-cover rounded-xl"
-						/>
-						<div className="bg-gradient-to-t from-[#003580] from-0% to-transparent to-95%
-						absolute left-0 bottom-7 right-0 p-4
-						transform translate-y-1/2 z-10;
-						rounded-b-xl">
-							<h2 className="text-2xl font-bold text-center text-white">
-								{ service.title }
-							</h2>
+		( [ _, service ], index ) =>
+		{
+			if ( isMobile )
+			{
+				// Mobile layout with dropdown
+				return (
+					<section key={ index } id={ service.title } className="mb-10">
+
+						{/* Dropdown button: Image with overlaid title */ }
+						<div
+							className="relative cursor-pointer"
+							onClick={ () =>
+							{
+								const dropdown =
+									document.getElementById(
+										`dropdown-${ service.title.replace( /\s+/g, '-' ) }`
+									);
+
+								if ( dropdown )
+								{
+									dropdown.classList.toggle( 'hidden' );
+								}
+							} }
+						>
+							<img
+								src={ service.image.src }
+								alt={ service.image.alt }
+								className="w-full object-cover rounded-xl"
+							/>
+							<div className="
+								bg-gradient-to-t from-[#003580] from-0% to-transparent to-95%
+								absolute left-0 bottom-7 right-0 p-4
+								transform translate-y-1/2 z-10
+								rounded-b-xl
+							">
+								<h2 className="text-2xl font-bold text-center text-white">
+									{ service.title }
+								</h2>
+							</div>
 						</div>
-					</div>
 
-					{/* Right column: Description */ }
-					<div className="flex items-top ml-5">
-						<p className="text-lg">{ service.description }</p>
-					</div>
-					
-				</section>
-				
-			)
-			
-		}
-	)
-
-}
-
-function HeadingBanner ()
+						{/* Description dropdown - Mobile */ }
+						<div
+							id={ `dropdown-${ service.title.replace( /\s+/g, '-' ) }` }
+							className="mt-8 p-4 border border-[#003580] rounded-xl hidden transition-all duration-300"
+						>
+							<p className="text-lg">{ service.description }</p>
+						</div>
+					</section>
+				);
+			} else
 {
-	return (
-		<div className="w-full relative flex flex-col items-center">
-			<div className="w-screen absolute left-1/2 transform -translate-x-1/2">
-				<img
-					src={ BANNER_PHOTO }
-					alt="Banner"
-					className="w-full h-[400px] object-cover"
-				/>
+				// Desktop layout with grid
+				return (
+					<section key={ index } id={ service.title } className="grid grid-cols-2 gap-6 mb-10">
+						{/* Left column: Image with overlaid title */ }
+						<div className="relative mr-5">
+							<img
+								src={ service.image.src }
+								alt={ service.image.alt }
+								className="w-full h-full object-cover rounded-xl"
+							/>
+							<div className="
+								bg-gradient-to-t from-[#003580] from-0% to-transparent to-95%
+								absolute left-0 bottom-7 right-0 p-4
+								transform translate-y-1/2 z-10;
+								rounded-b-xl
+							">
+								<h2 className="text-2xl font-bold text-center text-white">
+									{ service.title }
+								</h2>
+							</div>
+						</div>
 
-				<div className="
-                    absolute inset-0
-                    bg-gradient-to-t 
-                    from-[#FFFFFF] from-0%
-                    to-[#003580]/25 to-80%
-                ">
-					<h1 className='banner-title absolute inset-x-0 top-1/3 text-center'>
-						SERVICES<br /> OFFERED
-					</h1>
-				</div>
-			</div>
-			{/* Add spacer to maintain layout flow */ }
-			<div className="h-[500px]"></div>
-		</div>
+						{/* Right column: Description */ }
+						<div className="flex items-top ml-5">
+							<p className="text-lg">{ service.description }</p>
+						</div>
+					</section>
+				);
+			}
+		}
 	);
 }
 
 export default function Page ()
 {
+	const windowWidth = useWindowWidth();
+	const isMobile = windowWidth < 768;
+
 	return (
 		<>
-			{/* TODO: Header */ }
-			
 			<div className="container mx-auto flex flex-col">
-				
-				{/* Heading banner */}
-				<HeadingBanner />
-			
-				
-				{/* Horizontal line */}
+
+				{/* Heading banner */ }
+				{ HeadingBanner( "SERVICES<br/>OFFERED", BANNER_PHOTO ) }
+
+
+				{/* Horizontal line */ }
 				<h2 className="section-title text-center m-2">SERVICES</h2>
-				
+
 				<span className="horizontal-line m-5"></span>
-				
-				<div className="max-w-[90%] mx-auto"> 
-				{/* 
-					TODO: Services here must be anchor links and 
-					should scroll to the respective service page
-				*/}
-					<p className="text-center"><Service_Anchors /></p>
-					<div className="service-container my-8"> 
+
+				<div className="max-w-[90%] mx-auto">
+
+					{/* Only show service anchors on desktop */ }
+					{ !isMobile && <div className="text-center"><ServiceAnchorLinks /></div> }
+
+					{/* Services list */ }
+					<div className="service-container my-8">
 						<Services />
 					</div>
 				</div>
-				{/* TODO: Footer */}
-				
+
 			</div>
 		</>
-	)
+	);
 }
