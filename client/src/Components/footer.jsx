@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/footer.css";
-import logoWname from "../images/yooyyaaLogo.png";
+import logoWname from "../Assets/images/yooyyaaLogo.png";
 import locationIcon from "../Assets/icons/location_on.png";
 import phoneIcon from "../Assets/icons/phone.png";
 import mailIcon from "../Assets/icons/mail.png";

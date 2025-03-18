@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/Contact.module.css";
-import Backgroundimg from "../images/image.png";
-import logoWname from "../images/yooyyaa.png";
+import Backgroundimg from "../Assets/images/image.png";
+import logoWname from "../Assets/images/yooyyaa.png";
 
 function Contact() {
   // Local state to store form data
@@ -13,7 +13,7 @@ function Contact() {
     message: "",
   });
 
-  // Update local state on input change
+  // Update local state when an input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -22,11 +22,11 @@ function Contact() {
     }));
   };
 
-  // Handle form submission
+  // Handle form submission by sending data to our backend
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("http://localhost:5050/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -36,7 +36,7 @@ function Contact() {
         throw new Error("Failed to send form data");
       }
 
-      // Reset the form and notify success
+      // Reset the form and let the user know it worked
       setFormData({ name: "", email: "", phone: "", category: "", message: "" });
       alert("Form submitted successfully!");
     } catch (error) {
@@ -75,7 +75,7 @@ function Contact() {
           </p>
         </div>
 
-        {/* Form with onSubmit and onChange handlers */}
+        {/* Our form with onSubmit and onChange handlers */}
         <form className={styles.form} onSubmit={handleSubmit}>
           <input
             type="text"
@@ -133,11 +133,7 @@ function Contact() {
         </div>
 
         <div className={styles.infoContainer}>
-          <img
-            src={logoWname}
-            alt="Yooyaa Logo"
-            className={styles.infoLogo}
-          />
+          <img src={logoWname} alt="Yooyaa Logo" className={styles.infoLogo} />
           <div className={styles.contactDetails}>
             <p>
               PHONE: <span className={styles.highlight}>+1 902-123-4567</span>
@@ -146,13 +142,11 @@ function Contact() {
               EMAIL: <span className={styles.highlight}>something@gmail.com</span>
             </p>
             <p>
-              ADDRESS:{" "}
-              <span className={styles.highlight}>
-                123 Imaginary St, Halifax, NS B1H 1Z0
-              </span>
+              ADDRESS: <span className={styles.highlight}>123 Imaginary St, Halifax, NS B1H 1Z0</span>
             </p>
           </div>
         </div>
+
 
         {/* Map Section */}
         <div className={styles.mapContainer}>
