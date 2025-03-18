@@ -1,26 +1,31 @@
-
-h1{
-    font-size: 4rem;
-    color: #FFC700 !important; /* Text color */
+.text-shadow {
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6); /* Adds a soft shadow for better readability */
 }
 
 .faq-title {
     position: relative;
     text-align: center;
-    background-image: url("../Assets/question_marks_background.jpg"); /* Placeholder for your image */
+    background-image: url('../Assets/question_marks_background.jpg'); /* Changed to match terms and policies */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 400px; /* Adjust height as needed */
+    min-height: 400px;
     display: flex;
     align-items: center; /* Centers text vertically */
     justify-content: center; /* Centers text horizontally */
-    color: #FFC700 !important; /* Text color */
+    text-align: center;
+    padding: 5rem 2rem;
     font-weight: bold;
-    width: 100%;
+    width: 100vw;
 }
 
-/* Optional: Adding a semi-transparent overlay for better readability */
+h1 {
+    font-size: 4rem;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8); /* Enhanced drop shadow for better visibility */
+    color: #FFC700 !important; /* Text color */
+}
+
+/* Gradient overlay */
 .faq-title::before {
     content: "";
     position: absolute;
@@ -28,14 +33,22 @@ h1{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+    background: linear-gradient(to bottom, #001F3F 0%, rgba(255, 255, 255, 0.8) 70%, rgba(255, 255, 255, 1) 100%);
     z-index: 1;
 }
 
-/* Ensuring text stays above the overlay */
-.faq-title h1 {
+/* Ensuring text is above gradient + adding shadow */
+.faq-title h1, .faq-title > h1 {
     position: relative;
-    z-index: 2;
-    font-size: 4rem; /* Adjust as needed */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Soft shadow for readability */
+    z-index: 2; /* Ensure it stays above gradient */
+    font-size: 10rem !important; /* Updated font size with !important to override global styles */
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8); /* Enhanced drop shadow for better visibility */
+}
+
+.faq-title h2 {
+    font-size: 2rem; /* Increased font size */
+    font-weight: bold; /* Make text bold */
+    margin-top: 10px;
+    position: relative; /* Ensure it can be layered correctly */
+    z-index: 2; /* Ensure it sits above the image */
 }
