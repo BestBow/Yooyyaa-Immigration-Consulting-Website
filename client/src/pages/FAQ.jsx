@@ -1,7 +1,8 @@
 import React from 'react';
-import FAQAccordion from "../components/FAQAccordion";
+import FAQAccordion from "../Components/FAQAccordion";
 import "tailwindcss";
-import "../styles/global.css"
+import "../Styles/global.css"
+import "../Styles/FAQ.module.css"
 
 export default function FAQ() {
     
@@ -32,25 +33,12 @@ let faqInfo = [
 ];
 
 return (
+  
     <div className="flex flex-col justify-center w-full px-4 py-12">
-    <h1
-      className="
-        flex 
-        justify-center
-        text-center 
-        bg-[url('../assets/question_marks_background.jpg')] 
-        bg-contain
-        bg-center 
-        w-full 
-      "
-    >
-      Frequently Asked Questions
-    </h1>
-    <span className='horizontal-line mx-auto'></span>
-    <p className='text-center mb-8'>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </p>
+      <div className="faq-title flex justify-center text-center relative mb-20">
+        <h1>Frequently Asked Questions</h1>
+          {/* <span className="absolute inset-0 bg-gradient-to-b from-[#001F3F] to-transparent z-1"></span> */}
+        </div>
     <FAQAccordion faq={faqInfo} />
 
   </div>
