@@ -1,3 +1,4 @@
+import '../Styles/global.css';
 import '../Styles/termsAndPrivacyPolicy.css';
 
 function TermsAndPrivacy() {

@@ -22,7 +22,7 @@
     justify-content: center; /* Centers text horizontally */
     text-align: center;
     padding: 5rem 2rem;
-    color: #FFC700;
+    color: #FFC700 !important; 
     font-weight: bold;
     width: 100vw
 }

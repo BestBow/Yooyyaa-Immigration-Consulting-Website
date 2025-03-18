@@ -1,6 +1,7 @@
 
 h1{
     font-size: 4rem;
+    color: #FFC700 !important; /* Text color */
 }
 
 .faq-title {
@@ -14,7 +15,7 @@ h1{
     display: flex;
     align-items: center; /* Centers text vertically */
     justify-content: center; /* Centers text horizontally */
-    color: #FFC700; /* Text color */
+    color: #FFC700 !important; /* Text color */
     font-weight: bold;
     width: 100%;
 }
