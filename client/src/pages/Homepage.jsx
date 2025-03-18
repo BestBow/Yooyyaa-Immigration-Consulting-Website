@@ -10,6 +10,14 @@ const services = [
   { name: "SERVICE 4", image: serviceImage },
 ];
 
+const processSteps = [
+  { title: "Outreach", description: "Connect with us", icon: "💬" },
+  { title: "Strategize", description: "We craft a personalized plan", icon: "💡" },
+  { title: "Case Revision", description: "Thorough review of your case", icon: "🔍" },
+  { title: "Representation", description: "We handle all government communication", icon: "👨‍⚖️" },
+  { title: "Decision", description: "Achieve your immigration goals", icon: "✅" },
+];
+
 const Homepage = () => {
   return (
     <div>
@@ -32,20 +40,21 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="testimonials-section">
-        <h2 className="text-3xl font-bold text-blue-900 text-center">
-          SUCCESS STORIES FROM OUR PAST CUSTOMERS
-        </h2>
-        <div className="services-divider"></div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 mt-8">
-          {["John", "Kyle", "Angela", "Kim"].map((name, index) => (
-            <div key={index} className="testimonial-card">
-              <h3 className="text-xl font-bold text-blue-900">{name}</h3>
-              <p className="text-yellow-500 my-2">⭐⭐⭐⭐⭐</p>
-              <p className="text-gray-700">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
+      {/* Understand our process*/}
+      <section className="process-section text-center py-16 bg-gray-100">
+        <h2 className="text-4xl font-bold text-blue-900 mb-6">Understand Our Process</h2>
+        <div className="services-divider mx-auto mb-8"></div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 px-6">
+          {processSteps.map((step, index) => (
+            <div 
+              key={index} 
+              className="process-card flex flex-col items-center justify-between text-center p-6 bg-white rounded-lg shadow-md transition-transform transform hover:scale-105"
+            >
+              <div> 
+                <div className="text-5xl mb-3">{step.icon}</div>
+                <h3 className="text-lg font-semibold text-blue-900 break-words" style={{ wordBreak: 'break-word' }}>{`${index + 1}. ${step.title}`}</h3>
+              </div>
+              <p className="text-gray-700 mt-2 text-sm leading-snug">{step.description}</p>
             </div>
           ))}
         </div>
