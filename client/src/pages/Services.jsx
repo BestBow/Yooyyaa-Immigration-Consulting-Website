@@ -26,7 +26,7 @@ function useWindowWidth ()
 function ServiceAnchorLinks ()
 {
 	return Object.entries( serviceFiles ).map(
-		( [ _, service ], index ) => 
+		( [service ], index ) => 
 		{
 			const isLastItem = index === Object.entries(serviceFiles).length - 1;
 			return (
@@ -48,7 +48,7 @@ function Services ()
 	const isMobile = windowWidth < MOBILE_BREAKPOINT;
 
 	return Object.entries( serviceFiles ).map(
-		( [ _, service ], index ) =>
+		( [service ], index ) =>
 		{
 			if ( isMobile )
 			{
