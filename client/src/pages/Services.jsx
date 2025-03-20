@@ -1,4 +1,4 @@
-import BANNER_PHOTO from '../assets/service-banner.jpg';
+import BANNER_PHOTO from '../assets/images/service-banner.jpg';
 import HeadingBanner from '../Components/headingBanner.tsx';
 import { useState, useEffect } from 'react';
 
@@ -26,7 +26,7 @@ function useWindowWidth ()
 function ServiceAnchorLinks ()
 {
 	return Object.entries( serviceFiles ).map(
-		( [service ], index ) => 
+		( [_, service ], index ) => 
 		{
 			const isLastItem = index === Object.entries(serviceFiles).length - 1;
 			return (
@@ -48,11 +48,12 @@ function Services ()
 	const isMobile = windowWidth < MOBILE_BREAKPOINT;
 
 	return Object.entries( serviceFiles ).map(
-		( [service ], index ) =>
+		( [_, service ], index ) =>
 		{
 			if ( isMobile )
 			{
 				// Mobile layout with dropdown
+				console.log( service.title );
 				return (
 					<section key={ index } id={ service.title } className="mb-10">
 
@@ -99,7 +100,8 @@ function Services ()
 					</section>
 				);
 			} else
-{
+			{
+				console.log( service.title );
 				// Desktop layout with grid
 				return (
 					<section key={ index } id={ service.title } className="grid grid-cols-2 gap-6 mb-10">
