@@ -8,6 +8,7 @@ function AboutUs() {
     return (
         <div className="w-screen container flex flex-col justify-center">
             <div className="hero flex flex-col items-center justify-center">
+                <div className="gradient"></div>
                 <h1 className="banner-title">OUR TEAM</h1>
                 <h3 className="text-s"><b className="text-(--yellow)">WHO WE ARE & WHAT WE DO</b></h3>
             </div>
@@ -51,7 +52,7 @@ function AboutUs() {
             </div>
 
             <div className="connect mb-20">
-                <h2 className="ready mt-20 mb-10 text-3xl">Ready to start your journey? Let's make it happen!</h2>
+                <h2 className="ready mt-20 mb-10 text-3xl">Ready to start your journey? Let&aposs make it happen!</h2>
                 <Link to="/contact"><button type="button" id="get-in-touch" className="transition delay-50 duration-300 ease-in-out hover:scale-110">GET IN TOUCH</button></Link>
             </div>
         </div>
