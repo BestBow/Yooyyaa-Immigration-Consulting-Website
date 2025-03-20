@@ -3,10 +3,16 @@
 # This specific template is located at:
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/npm.gitlab-ci.yml
 
-testJob:
+stages:
+  - test
+  - deploy
+
+lintTest:
   stage: test
+  image: node:latest
   script:
-    - echo "Dummy job for pipeline status"
+  - npm ci
+  - npm run lint
   rules:
     - when: always
 
