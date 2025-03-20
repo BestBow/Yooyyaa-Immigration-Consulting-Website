@@ -53,7 +53,6 @@ function Services ()
 			if ( isMobile )
 			{
 				// Mobile layout with dropdown
-				console.log( service.title );
 				return (
 					<section key={ index } id={ service.title } className="mb-10">
 
@@ -101,7 +100,6 @@ function Services ()
 				);
 			} else
 			{
-				console.log( service.title );
 				// Desktop layout with grid
 				return (
 					<section key={ index } id={ service.title } className="grid grid-cols-2 gap-6 mb-10">
