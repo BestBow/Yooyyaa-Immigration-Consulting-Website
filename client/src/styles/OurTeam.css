@@ -16,7 +16,7 @@
         width: 100vw;
         height: 30vw;
         position: absolute;
-        background-image: linear-gradient(to top, aliceblue, transparent);
+        background-image: linear-gradient(to bottom, var(--dark-blue), 80%, transparent);
     }
 
     .hero {
@@ -44,7 +44,7 @@
     .line {
         background-color: var(--yellow);
         width: 75vw;
-        height: 1vh;
+        height: 1.25vh;
         display: flex;
         justify-self: center;
         justify-content: center;
@@ -57,6 +57,8 @@
         margin-top: 30px;
         h2, h3, h5 {
             color: var(--dark-blue);
+            font-weight: 900;
+            text-shadow: 0px 1px #363737;
         }
     }
 

@@ -16,8 +16,8 @@ function AboutUs() {
             <span className="line mt-4 mb-4"></span>
             <p id="blurb" className="mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             
-            <div className="company">
-                <h3 className="pr-2 pl-2 mb-3">COMAPNY MISSION & VISION</h3>
+            <div className="company mt-15 mb-15">
+                <h3 className="pr-2 pl-2 mb-3">COMPANY MISSION & VISION</h3>
                 <span className="mobile-line"></span>
                 <div className="mission-vision grid gap-20 mr-4 ml-4">
                     <div className="mission w-100">
@@ -31,7 +31,7 @@ function AboutUs() {
                 </div>
             </div>
 
-            <div className="meet-our-experts flex flex-col items-center mb-10">
+            <div className="meet-our-experts flex flex-col items-center mb-20">
                 <h3 className="mt-10">MEET OUR EXPERT</h3>
                 <span className="line mt-4 mb-4"></span>
                 <div className="experts items-center">
