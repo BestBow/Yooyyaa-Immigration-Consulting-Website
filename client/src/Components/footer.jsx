@@ -6,7 +6,11 @@ import phoneIcon from "../Assets/icons/phone.png";
 import mailIcon from "../Assets/icons/mail.png";
 import { Link } from "react-router-dom";
 
-const Footer = () => {
+const Footer = () =>
+{
+  
+  const year = new Date().getFullYear();
+  
   return (
     <footer className="footer">
       {/* Top Section - Logo & Contact */}
@@ -55,7 +59,7 @@ const Footer = () => {
           <Link to="/terms">Terms &amp; Conditions</Link>
         </div>
         <p className="copyright">
-          &copy; 2025 Yooyyaa Immigration Consultants. All rights reserved.
+          &copy; {year} Yooyyaa Immigration Consultants. All rights reserved.
         </p>
       </div>
     </footer>
