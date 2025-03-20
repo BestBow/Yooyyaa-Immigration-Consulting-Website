@@ -8,6 +8,7 @@ function AboutUs() {
     return (
         <div className="w-screen container flex flex-col justify-center">
             <div className="hero flex flex-col items-center justify-center">
+                <div className="gradient"></div>
                 <h1 className="banner-title">OUR TEAM</h1>
                 <h3 className="text-s"><b className="text-(--yellow)">WHO WE ARE & WHAT WE DO</b></h3>
             </div>
