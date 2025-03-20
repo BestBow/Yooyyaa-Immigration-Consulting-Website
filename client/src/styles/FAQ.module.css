@@ -52,3 +52,23 @@ h1 {
     position: relative; /* Ensure it can be layered correctly */
     z-index: 2; /* Ensure it sits above the image */
 }
+
+
+.faq-item{
+    margin: 20px 80px; /* Adjust margin for spacing */
+    padding: 15px; /* Add padding for better spacing */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+
+}
+
+.faq-question {
+    font-size: 1.5rem; /* Increase font size for questions */
+    color: #333; /* Darker color for better readability */
+}
+
+.faq-answer {
+    font-size: 1rem; /* Standard font size for answers */
+    color: #666; /* Lighter color for answers */
+}

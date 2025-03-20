@@ -1,8 +1,9 @@
 import React from 'react';
-import FAQAccordion from "../Components/FAQAccordion";
+
 import "tailwindcss";
 import "../Styles/global.css"
-import "../Styles/FAQ.module.css"
+import styles from "../Styles/FAQ.module.css"
+
 
 export default function FAQ() {
     
@@ -39,7 +40,16 @@ return (
         <h1>Frequently Asked Questions</h1>
           {/* <span className="absolute inset-0 bg-gradient-to-b from-[#001F3F] to-transparent z-1"></span> */}
         </div>
-    <FAQAccordion faq={faqInfo} />
+        <span className="horizontal-line m-4"></span>
+
+    {faqInfo.map((item, index) => (
+      <div key={index} className={styles['faq-item'] + " mb-4"}>
+
+        <h2 className="faq-question font-bold">{item.question}</h2>
+        <p className="faq-answer">{item.answer}</p>
+      </div>
+    ))}
+
 
   </div>
 );
