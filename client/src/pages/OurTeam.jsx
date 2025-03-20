@@ -16,7 +16,7 @@ function AboutUs() {
             <span className="line mt-4 mb-4"></span>
             <p id="blurb" className="mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             
-            <div className="company mt-15 mb-15">
+            <div className="company mt-7">
                 <h3 className="pr-2 pl-2 mb-3">COMPANY MISSION & VISION</h3>
                 <span className="mobile-line"></span>
                 <div className="mission-vision grid gap-20 mr-4 ml-4">
@@ -31,9 +31,9 @@ function AboutUs() {
                 </div>
             </div>
 
-            <div className="meet-our-experts flex flex-col items-center mb-20">
+            <div className="meet-our-experts flex flex-col items-center mb-15">
                 <h3 className="mt-10">MEET OUR EXPERT</h3>
-                <span className="line mt-4 mb-4"></span>
+                <span className="line mt-4 mb-1"></span>
                 <div className="experts items-center">
                     <div className="expert flex flex-col items-center w-100" id="expert1">
                         <img src={face} alt="one of our consultants"/>
@@ -47,12 +47,12 @@ function AboutUs() {
 
             <div className="why-us space-y-4 flex flex-col">
                 <h3>WHY CHOOSE US</h3>
-                <span className="line mt-4 mb-4"></span>
+                <span className="line mb-4"></span>
                 <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse corporis suscipit veritatis voluptatem, quaerat repellendus nemo. Ipsam, neque deserunt necessitatibus veniam commodi est nam? Minus porro eos voluptatum necessitatibus natus.</b></p>
             </div>
 
-            <div className="connect mb-20">
-                <h2 className="ready mt-20 mb-10 text-3xl">Ready to start your journey? Let's make it happen!</h2>
+            <div className="connect mb-10">
+                <h2 className="ready mt-15 mb-10 text-3xl">Ready to start your journey? Let's make it happen!</h2>
                 <Link to="/contact"><button type="button" id="get-in-touch" className="transition delay-50 duration-300 ease-in-out hover:scale-110">GET IN TOUCH</button></Link>
             </div>
         </div>
