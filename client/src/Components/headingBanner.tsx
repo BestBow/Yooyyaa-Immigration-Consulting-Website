@@ -1,5 +1,4 @@
 import React from "react";
-import DEFAULT_BANNER_PHOTO from '../assets/images/service-banner.jpg';
 
 export default function HeadingBanner ( title: string | TrustedHTML, bannerPhoto: string | null )
 {
@@ -7,7 +6,7 @@ export default function HeadingBanner ( title: string | TrustedHTML, bannerPhoto
 		<div className="w-full relative flex flex-col items-center">
 			<div className="w-screen absolute left-1/2 transform -translate-x-1/2">
 				<img
-					src={bannerPhoto != null ? bannerPhoto : DEFAULT_BANNER_PHOTO }
+					src={bannerPhoto != null ? bannerPhoto : '../assets/images/service-banner.jpg' }
 					alt="Banner"
 					className="w-full h-[400px] object-cover"
 				/>

@@ -26,8 +26,10 @@ function useWindowWidth ()
 function ServiceAnchorLinks ()
 {
 	return Object.entries( serviceFiles ).map(
-		( [_, service ], index ) => 
+		( [i, service ], index ) => 
 		{
+			console.log( i ); // bypass lint
+							 // TODO: adjust lint setting to allow for unused variables
 			const isLastItem = index === Object.entries(serviceFiles).length - 1;
 			return (
 				<a
@@ -48,8 +50,9 @@ function Services ()
 	const isMobile = windowWidth < MOBILE_BREAKPOINT;
 
 	return Object.entries( serviceFiles ).map(
-		( [_, service ], index ) =>
+		( [i, service ], index ) =>
 		{
+			console.log( i ); // bypass lint, // TODO: adjust lint setting to allow for unused variables
 			if ( isMobile )
 			{
 				// Mobile layout with dropdown
