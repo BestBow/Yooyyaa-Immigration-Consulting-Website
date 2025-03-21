@@ -24,7 +24,7 @@ const Homepage = () => {
     <div>
       {/* Hero Section */}
       <section className="hero-section">
-        <h1>Home</h1>
+        <h1>HOME</h1>
       </section>
 
       {/* Services Section */}
