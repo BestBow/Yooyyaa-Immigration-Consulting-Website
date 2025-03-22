@@ -54,6 +54,10 @@
   @apply text-3xl font-bold text-white;
 }
 
+.cta-section p{
+  @apply text-white;
+}
+
 .cta-section img {
   @apply w-10/12 max-h-80 object-cover rounded-lg shadow-lg mx-auto;
 }

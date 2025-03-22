@@ -1,8 +1,9 @@
 import React from "react";
 import { FaComments, FaLightbulb, FaSearch, FaUserTie, FaCheckCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import serviceImage from "../assets/Green-Valley.jpg";
 import "../styles/global.css";
 import "../styles/Home.css";
-import serviceImage from "../assets/Green-Valley.jpg";
 
 const services = [
   { name: "SERVICE 1", image: serviceImage },
@@ -22,9 +23,15 @@ const processSteps = [
 const Homepage = () => {
   return (
     <div>
-      {/* Hero Section */}
-      <section className="hero-section">
-        <h1>Home</h1>
+      {/* Hero Section with Background Image */}
+      <section
+        className="relative w-full h-[350px] md:h-[450px] flex items-center justify-center text-white text-4xl font-bold bg-cover bg-center bg-no-repeat" 
+        style={{ backgroundImage: `url(${serviceImage})` }} 
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-white/90"></div>
+        <h1 className="relative z-10 text-5xl font-extrabold text-white uppercase tracking-wide">
+          <span className="text-yellow-500">HOME</span>
+        </h1>
       </section>
 
       {/* Services Section */}
@@ -43,27 +50,29 @@ const Homepage = () => {
 
       {/* Understand our Process */}
       <section className="text-center py-16 bg-white">
-      <h2 className="text-3xl font-bold text-gray-900 underline decoration-yellow-600 decoration-4 underline-offset-4">
+        <h2 className="text-3xl font-bold text-gray-900 underline decoration-yellow-600 decoration-4 underline-offset-4">
           Understand our Process
         </h2>
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-10 px-10 mt-12">
-        {processSteps.map((step, index) => (
-          <div key={index} className="flex flex-col items-center">
-            {step.icon}
-            <h3 className="text-xl font-bold text-red-600 mt-3">{`${index + 1}. ${step.title}`}</h3>
-            <p className="text-gray-700 mt-1">{step.description}</p>
-          </div>
-        ))}
-      </div>
-    </section>
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 px-10 mt-12">
+          {processSteps.map((step, index) => (
+            <div key={index} className="flex flex-col items-center">
+              {step.icon}
+              <h3 className="text-xl font-bold text-red-600 mt-3">{`${index + 1}. ${step.title}`}</h3>
+              <p className="text-gray-700 mt-1">{step.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="cta-section">
         <h3>THINKING ABOUT COMING TO CANADA?</h3>
         <p className="text-lg text-white my-4">LET US KNOW HOW WE CAN HELP!</p>
         <div className="relative mt-6 w-full max-w-[75%] mx-auto">
-          <img src={serviceImage} alt="Talk to us" />
-          <span className="cta-text">TALK TO US TODAY</span>
+          <Link to="/contact">
+            <img src={serviceImage} alt="Talk to us" />
+            <span className="cta-text">TALK TO US TODAY</span>
+          </Link>
         </div>
       </section>
     </div>
