@@ -1,14 +1,16 @@
 import React from "react";
+const DEFAULT_BANNER_PHOTO = 'https://4kwallpapers.com/images/walls/thumbs_3t/3939.jpg';
 
-export default function HeadingBanner(title: string | TrustedHTML, bannerPhoto: string | null) {
-  return (
-    <div className="w-full relative flex flex-col items-center mb-8">
-      <div className="w-screen absolute left-1/2 transform -translate-x-1/2">
-        <img
-          src={bannerPhoto != null ? bannerPhoto : "../assets/service-banner.jpg"}
-          alt="Banner"
-          className="w-full h-[400px] object-cover"
-        />
+export default function HeadingBanner ( title: string | TrustedHTML, bannerPhoto: string | null )
+{
+	return (
+		<div className="w-full relative flex flex-col items-center">
+			<div className="w-screen absolute left-1/2 transform -translate-x-1/2">
+				<img
+					src={bannerPhoto != null ? bannerPhoto : DEFAULT_BANNER_PHOTO }
+					alt="Banner"
+					className="w-full h-[400px] object-cover"
+				/>
 
         <div
           className="
