@@ -6,6 +6,7 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import nodemailer from "nodemailer";
+import { rateLimit } from 'express-rate-limit';
 
 const PORT = process.env.PORT || 5050;
 const app = express();
@@ -15,6 +16,17 @@ app.use(cors());
 
 app.use(express.json()); // Built-in parser for JSON bodies
 app.use(bodyParser.json());
+
+
+const formLimiter = rateLimit({
+  windowMs: 60 * 1000, // 1 minute
+  max: 10, // max 10 requests per minute
+  message: "cannot send more than 10 requests per minute"
+});
+
+//Applying rateLimiter on contact form route
+app.use("/api/contact",formLimiter);
+
 
 // Set up Nodemailer transporter using environment variables
 const transporter = nodemailer.createTransport({
