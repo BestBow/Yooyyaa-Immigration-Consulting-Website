@@ -1,5 +1,7 @@
 import React from "react";
 import { FaComments, FaLightbulb, FaSearch, FaUserTie, FaCheckCircle } from "react-icons/fa";
+import BANNER_PHOTO from '../assets/images/service-banner.jpg';
+import HeadingBanner from '../Components/headingBanner.tsx';
 import { Link } from "react-router-dom";
 import serviceImage from "../assets/Green-Valley.jpg";
 import "../styles/global.css";
@@ -23,16 +25,7 @@ const processSteps = [
 const Homepage = () => {
   return (
     <div>
-      {/* Hero Section with Background Image */}
-      <section
-        className="relative w-full h-[350px] md:h-[450px] flex items-center justify-center text-white text-4xl font-bold bg-cover bg-center bg-no-repeat" 
-        style={{ backgroundImage: `url(${serviceImage})` }} 
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-white/90"></div>
-        <h1 className="relative z-10 text-5xl font-extrabold text-white uppercase tracking-wide">
-          <span className="text-yellow-500">HOME</span>
-        </h1>
-      </section>
+      { HeadingBanner( "HOME", BANNER_PHOTO ) }
 
       {/* Services Section */}
       <section className="text-center py-16">
