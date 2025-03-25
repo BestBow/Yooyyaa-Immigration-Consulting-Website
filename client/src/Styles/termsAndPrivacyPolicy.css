@@ -6,6 +6,7 @@
     margin: 0 auto;
     font-family: Arial, sans-serif;
     color: #333;
+    display: block;
 }
 
 .privacy-title {
@@ -15,15 +16,15 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 50vh;
     min-height: 400px;
     display: flex;
     align-items: center; /* Centers text vertically */
     justify-content: center; /* Centers text horizontally */
     text-align: center;
     padding: 5rem 2rem;
-    color: #FFC700;
+    color: #FFC700 !important; 
     font-weight: bold;
+    width: 100vw
 }
 
 /* Gradient overlay */
@@ -46,7 +47,6 @@
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6); /* Adds a soft shadow for better readability */
 }
 
-
 .privacy-title h2 {
     font-size: 2rem; /* Increased font size */
     font-weight: bold; /* Make text bold */
@@ -58,26 +58,30 @@
 /* Line separator */
 .line {
     display: block;
-    width: 800px; /* Increased width */
-    height: 6px; /* Increased thickness */
-
+    width: 100%;
+    height: 3px;
     background-color: #FFC700;
-    margin: 20px auto;
+    margin: 0;
 }
 
 /* Section styling */
-.terms-section, .privacy-section {
+.terms-section, .privacy-section, .legal-disclaimers {
     margin-top: 30px;
+    text-align: left;
 }
 
-.terms-section h3, .privacy-section h3 {
+.terms-section h3, .privacy-section h3, .legal-disclaimers h3 {
     color: #004080;
     font-size: 1.5rem;
 }
 
-.terms-section p, .privacy-section p{
+.terms-section p, .privacy-section p, .legal-disclaimers p {
     font-size: 1rem;
     line-height: 2;
+}
+
+.contactForm{
+    text-align: left;
 }
 
 /* Footer section */
@@ -88,4 +92,38 @@
     background-color: #004080;
     color: rgb(223, 160, 160);
     border-radius: 8px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+    /* .container{
+        background-color: pink;
+    } */
+
+    .container {
+        width: 95%;
+        padding: 40px;
+    }
+
+    .privacy-title h1 {
+        font-size: 3rem; /* Smaller font size for mobile */
+    }
+
+    .privacy-title h2 {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+
+
+    .terms-section h3, .privacy-section h3, .legal-disclaimers h3 {
+        font-size: 1.2rem; /* Adjusted font size for mobile */
+    }
+
+    .terms-section p, .privacy-section p, .legal-disclaimers p {
+        font-size: 0.9rem; /* Adjusted font size for mobile */
+    }
+
+    .footer {
+        padding: 10px; /* Reduced padding for mobile */
+    }
 }
