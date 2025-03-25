@@ -16,7 +16,9 @@
         width: 100vw;
         height: 30vw;
         position: absolute;
-        background-image: linear-gradient(to bottom, var(--dark-blue), 80%, transparent);
+        /* change 100 to 80 */
+        background-image: linear-gradient(to bottom, var(--dark-blue), 100%, transparent);
+        opacity: 60%;
     }
 
     .hero {
@@ -41,7 +43,7 @@
         }
     }
 
-    .line {
+    /* .line {
         background-color: var(--yellow);
         width: 75vw;
         height: 1.25vh;
@@ -49,16 +51,21 @@
         justify-self: center;
         justify-content: center;
         align-self: center;
-    }
+    } */
 
     .mission-vision {
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin-top: 30px;
+        text-align: left;
         h2, h3, h5 {
             color: var(--dark-blue);
             font-weight: 900;
-            text-shadow: 0px 1px #363737;
+            /* text-shadow: 0px 1px #363737; */
+        }
+
+        p {
+            font-size: small;
         }
     }
 
@@ -67,28 +74,33 @@
         padding: 20px 50px;
         .experts {
             display: grid;
-            grid-template-columns: auto;
+            grid-template-columns: auto auto;
             gap: 30px;
             .expert {
-                border: 10px;
-                border-style: solid;
-                border-color: var(--dark-blue);
-                border-radius: 10%;
-                background-color: var(--grey);
+                /* border: 10px;
+                border-style: solid; */
+                /* border-color: var(--dark-blue); */
+                /* border-radius: 10%; */
+                /* background-color: var(--grey); */
                 margin: 20px;
                 width: 1500;
 
                 img {
                     margin-top: 25px;
-                    border-radius: 50%;
-                    width: 200px;
-                    height: 200px;
+                    border-radius: 10%;
+                    width: 400px;
+                    height: 450px;
                     object-fit: cover;
                 }
                 p {
                     padding: 10px;
                 }
             }
+        }
+
+        .why-us .icon {
+            color: #2563EB !important;
+            margin-bottom: 100px;
         }
     }
     .connect{
@@ -128,7 +140,7 @@
             }
         }
     
-        .line, .mobile-line {
+        /* .line, .mobile-line {
             background-color: var(--yellow);
             width: 75vw;
             height: 1vh;
@@ -136,7 +148,7 @@
             justify-self: center;
             justify-content: center;
             align-self: center;
-        }
+        } */
     
         .company {
             display: grid;
