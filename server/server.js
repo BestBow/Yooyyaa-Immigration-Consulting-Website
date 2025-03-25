@@ -8,7 +8,8 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import nodemailer from "nodemailer";
 
-const formLimiter = require('./middleware/rateLimit');
+import formLimiter from "./middleware/rateLimit";
+
 
 const PORT = process.env.PORT || 5050;
 const app = express();

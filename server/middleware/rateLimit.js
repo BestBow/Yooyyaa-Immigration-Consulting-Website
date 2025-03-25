@@ -5,7 +5,7 @@ import rateLimit from "express-rate-limit";
 const formLimiter = rateLimit({
   windowMs:60 * 1000,
   max: 10,
-  statusCode
+  message:"Exceeded max request of 10 per minute",
 });
 
 module.exports = formLimiter;
