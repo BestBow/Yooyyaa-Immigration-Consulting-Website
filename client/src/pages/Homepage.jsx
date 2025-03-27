@@ -25,7 +25,7 @@ const processSteps = [
 const Homepage = () => {
   return (
     <div>
-      { HeadingBanner( "HOME", BANNER_PHOTO ) }
+      { HeadingBanner( "YOOYYAA IMMIGRATION", BANNER_PHOTO ) }
 
       {/* Services Section */}
       <section className="text-center py-16">
@@ -42,20 +42,20 @@ const Homepage = () => {
       </section>
 
       {/* Understand our Process */}
-      <section className="text-center py-16 bg-white">
-        <h2 className="text-3xl font-bold text-gray-900 underline decoration-yellow-600 decoration-4 underline-offset-4">
-          Understand our Process
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 px-10 mt-12">
-          {processSteps.map((step, index) => (
-            <div key={index} className="flex flex-col items-center">
-              {step.icon}
-              <h3 className="text-xl font-bold text-red-600 mt-3">{`${index + 1}. ${step.title}`}</h3>
-              <p className="text-gray-700 mt-1">{step.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+<section className="text-center py-16 bg-white">
+  <h2 className="text-3xl font-bold text-gray-900 underline decoration-yellow-600 decoration-4 underline-offset-4">
+    Understand our Process
+  </h2>
+  <div className="grid grid-cols-1 md:grid-cols-5 gap-6 px-4 mt-12"> 
+    {processSteps.map((step, index) => (
+      <div key={index} className="flex flex-col items-center">
+        {step.icon}
+        <h3 className="text-base font-semibold text-red-600 mt-2 whitespace-nowrap">{`${index + 1}. ${step.title}`}</h3> {/* Reduced font size and added nowrap */}
+        <p className="text-sm text-gray-700 mt-1">{step.description}</p> 
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* CTA Section */}
       <section className="cta-section">
