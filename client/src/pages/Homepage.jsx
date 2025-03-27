@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/global.css";
 import "../styles/Home.css";
 import serviceImage from "../assets/Green-Valley.jpg";
+import { Link } from "react-router-dom";
 
 const services = [
   { name: "SERVICE 1", image: serviceImage },
@@ -23,7 +24,7 @@ const Homepage = () => {
     <div>
       {/* Hero Section */}
       <section className="hero-section">
-        <h1>Home</h1>
+        <h1>HOME</h1>
       </section>
 
       {/* Services Section */}
@@ -65,8 +66,10 @@ const Homepage = () => {
         <h3>THINKING ABOUT COMING TO CANADA?</h3>
         <p className="text-lg text-white my-4">LET US KNOW HOW WE CAN HELP!</p>
         <div className="relative mt-6 w-full max-w-[75%] mx-auto">
+          <Link to="/contact">
           <img src={serviceImage} alt="Talk to us" />
           <span className="cta-text">TALK TO US TODAY</span>
+          </Link>
         </div>
       </section>
     </div>
