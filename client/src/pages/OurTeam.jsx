@@ -19,12 +19,8 @@ function AboutUs() {
                 <h3 className="text-s"><b className="text-(--yellow) text-lg">Dedicated to making your immigration journey smooth and successful</b></h3>
             </div>
 
-            {/* <span className="line mt-4 mb-4"></span> */}
-            {/* <p id="blurb" className="mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> */}
-            
             <div className="company mt-7">
-                {/* <h3 className="pr-2 pl-2 mb-3">COMPANY MISSION & VISION</h3> */}
-                {/* <span className="mobile-line"></span> */}
+            
                 <div className="mission-vision grid gap-20 mr-4 ml-4">
                     <div className="mission w-100 mt-3">
                         <h5>OUR MISSION</h5>
@@ -40,14 +36,9 @@ function AboutUs() {
             <div className="meet-our-experts flex flex-col items-center mb-15">
                 <h3 className="mt-10"><b className="text-stone-950">MEET OUR EXPERT</b></h3>
                 <p>Our certified immigration specialist brings years of experiene and dedication to your immigration journey</p>
-                {/* <span className="line mt-4 mb-1"></span> */}
                 <div className="experts">
                     <div className="expert flex flex-col w-100" id="expert1">
                         <img src={consultant} alt="Yooyyaa's experct consultant"/>
-                        {/* <p><b>Jane Doe, RCIC #123456<br />
-                        Senior Immigration Consultant</b><br />
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
-                        </p> */}
                     </div>
                     <div className="mt-15 text-left">
                         <p><b>Jane Doe, RCIC #123456</b><br /><br />                       
@@ -62,8 +53,6 @@ function AboutUs() {
 
             <div className="why-us space-y-4 flex flex-col">
                 <h4 className="mb-10"><b className="text-stone-950 text-xl">WHY CHOOSE US</b></h4>
-                {/* <span className="line mb-4"></span> */}
-                {/* <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse corporis suscipit veritatis voluptatem, quaerat repellendus nemo. Ipsam, neque deserunt necessitatibus veniam commodi est nam? Minus porro eos voluptatum necessitatibus natus.</b></p> */}
                 <div className="grid grid-cols-4 reasons">
                     <div>
                         <FontAwesomeIcon className="icon" icon={faAward} inverse />
@@ -88,7 +77,7 @@ function AboutUs() {
                 </div>
             </div>
 
-            <div className="connect mb-10">
+            <div className="connect mb-10 mt-20">
                 <h2 className="ready mt-15 mb-10 text-3xl">Ready to start your journey? Let's make it happen!</h2>
                 <Link to="/contact"><button type="button" id="get-in-touch" className="transition delay-50 duration-300 ease-in-out hover:scale-110">GET IN TOUCH</button></Link>
             </div>
