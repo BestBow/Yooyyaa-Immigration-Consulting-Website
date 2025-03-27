@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import "../styles/global.css"; 
 import styles from "../styles/Contact.module.css";
+import HeadingBanner from "../Components/headingBanner.tsx";
 import Backgroundimg from "../Assets/images/image.png";
 import logoWname from "../Assets/images/yooyyaa.png";
 
@@ -36,8 +38,14 @@ function Contact() {
         throw new Error("Failed to send form data");
       }
 
-      // Reset the form and let the user know it worked
-      setFormData({ name: "", email: "", phone: "", category: "", message: "" });
+      // Reset the form and notify success
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        category: "",
+        message: "",
+      });
       alert("Form submitted successfully!");
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -47,15 +55,8 @@ function Contact() {
 
   return (
     <div className={styles.container}>
-      {/* Banner section */}
-      <section className={styles.contactBanner}>
-        <div
-          className={styles.bannerBg}
-          style={{ backgroundImage: `url(${Backgroundimg})` }}
-        />
-        <div className={styles.blueOverlay} />
-        <h2 className={styles.bannerText}>GET IN TOUCH</h2>
-      </section>
+      {/* Use the HeadingBanner component for the banner */}
+      {HeadingBanner("GET IN TOUCH", Backgroundimg)}
 
       {/* Section Title */}
       <h3 className={styles.sectionTitle}>WE ARE HERE TO HELP</h3>
@@ -71,7 +72,7 @@ function Contact() {
             <strong>WE ARE HERE TO MAKE IT EASY.</strong>
           </p>
           <p className={styles.description}>
-            Let us know how we can help, and we will get back to you in [TIME] [UNIT]!
+            Let us know how we can help, and we will get back to you in 24 hours!
           </p>
         </div>
 
@@ -146,7 +147,6 @@ function Contact() {
             </p>
           </div>
         </div>
-
 
         {/* Map Section */}
         <div className={styles.mapContainer}>

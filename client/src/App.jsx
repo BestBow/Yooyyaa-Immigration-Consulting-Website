@@ -1,15 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./styles/global.css";
+import "./Styles/global.css";
 
-import Header from "./components/header";
+import Header from "./Components/header";
 import Footer from "./Components/footer";
 import Homepage from "./pages/Homepage";
 import OurTeam from "./pages/OurTeam";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
-import TermsandPrivacyPolicy from "./components/TermsAndPrivacyPolicy";
+import TermsandPrivacyPolicy from "./Components/termsAndPrivacyPolicy";
 
 function App() {
   return (
@@ -26,6 +26,7 @@ function App() {
       <Footer />
     </Router>
   );
+
 }
 
 export default App;
