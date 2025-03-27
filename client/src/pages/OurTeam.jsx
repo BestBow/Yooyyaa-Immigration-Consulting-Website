@@ -64,9 +64,9 @@ function AboutUs() {
                 <h4 className="mb-10"><b className="text-stone-950 text-xl">WHY CHOOSE US</b></h4>
                 {/* <span className="line mb-4"></span> */}
                 {/* <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse corporis suscipit veritatis voluptatem, quaerat repellendus nemo. Ipsam, neque deserunt necessitatibus veniam commodi est nam? Minus porro eos voluptatum necessitatibus natus.</b></p> */}
-                <div className="grid grid-cols-4">
+                <div className="grid grid-cols-4 reasons">
                     <div>
-                        <FontAwesomeIcon className="icon" icon={faAward} />
+                        <FontAwesomeIcon className="icon" icon={faAward} inverse />
                         <p><b>Licensed and Certified</b></p>
                         <p>Our team consists of licensed immigration professionals</p>
                     </div>
