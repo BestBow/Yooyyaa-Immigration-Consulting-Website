@@ -10,6 +10,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
 import TermsandPrivacyPolicy from "./Components/termsAndPrivacyPolicy";
+import AdminLanding from "./pages/AdminLanding";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/termsAndPrivacy" element={<TermsandPrivacyPolicy />} />
+        <Route path="/adminLanding" element={<AdminLanding/>}/>
       </Routes>
       <Footer />
     </Router>
