@@ -88,7 +88,7 @@ function AboutUs() {
                 </div>
             </div>
 
-            <div className="connect mb-10">
+            <div className="connect mb-10 mt-20">
                 <h2 className="ready mt-15 mb-10 text-3xl">Ready to start your journey? Let's make it happen!</h2>
                 <Link to="/contact"><button type="button" id="get-in-touch" className="transition delay-50 duration-300 ease-in-out hover:scale-110">GET IN TOUCH</button></Link>
             </div>
