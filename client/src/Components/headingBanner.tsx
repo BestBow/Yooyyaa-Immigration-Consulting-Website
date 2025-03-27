@@ -1,7 +1,7 @@
 import React from "react";
 const DEFAULT_BANNER_PHOTO = 'https://4kwallpapers.com/images/walls/thumbs_3t/3939.jpg';
 
-export default function HeadingBanner ( title: string | TrustedHTML, bannerPhoto: string | null )
+export default function HeadingBanner ( title: string | TrustedHTML, bannerPhoto?: string, subtitle?: string | TrustedHTML )
 {
 	return (
 		<div className="w-full relative flex flex-col items-center">
@@ -21,18 +21,29 @@ export default function HeadingBanner ( title: string | TrustedHTML, bannerPhoto
           "
         >
           <h1
-            className="
-              banner-title 
+            className=" 
               absolute inset-x-0 top-1/3 
               text-center 
-              text-5xl md:text-6xl 
-              font-extrabold 
+              text-[90px] 
               uppercase 
               text-yellow-400
             "
-            style={{ textShadow: "2px 2px 6px rgba(0, 0, 0, 0.8)" }}
-            dangerouslySetInnerHTML={{ __html: title ? title : "PAGE<br/>TITLE" }}
+            style={{ textShadow: "3px 3px 8px rgba(0, 0, 0, 0.5)" }}
+            dangerouslySetInnerHTML={{ __html: title ? title : "PAGE TITLE" }}
           />
+          
+          <h2
+            className=" 
+              absolute inset-x-0 top-1/3 
+              text-center 
+              text-[30px] 
+              uppercase 
+              text-yellow-400
+            "
+            style={{ textShadow: "3px 3px 8px rgba(0, 0, 0, 0.5)" }}
+            dangerouslySetInnerHTML={{ __html: subtitle ? subtitle : "Dedicated to making your immigration journey smooth and successful!" }}
+          />
+          
         </div>
       </div>
 

@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+p {
+	@apply text-[#5B6385] font-medium text-[24px]
+}

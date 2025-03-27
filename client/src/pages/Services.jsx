@@ -3,7 +3,7 @@ import HeadingBanner from '../Components/headingBanner.tsx';
 import { useState, useEffect } from 'react';
 
 import "tailwindcss";
-import '../styles/global.css';
+import '../styles/services.css';
 
 const serviceFiles = import.meta.glob( '../assets/service-descriptions/*.json', { eager: true } );
 const MOBILE_BREAKPOINT = 768;
@@ -146,7 +146,7 @@ export default function Page ()
 			<div className="container mx-auto flex flex-col">
 
 				{/* Heading banner */ }
-				{ HeadingBanner( "SERVICES<br/>OFFERED", BANNER_PHOTO ) }
+				{ HeadingBanner( "SERVICES OFFERED", BANNER_PHOTO ) }
 
 
 				{/* Horizontal line */ }
