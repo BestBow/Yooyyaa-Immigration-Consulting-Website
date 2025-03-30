@@ -146,7 +146,7 @@ export default function Page ()
 			<div className="container mx-auto flex flex-col">
 
 				{/* Heading banner */ }
-				{ HeadingBanner( "SERVICES OFFERED", BANNER_PHOTO ) }
+				{ HeadingBanner( "SERVICES<br/>OFFERED", null, BANNER_PHOTO ) }
 
 
 				{/* Horizontal line */ }
