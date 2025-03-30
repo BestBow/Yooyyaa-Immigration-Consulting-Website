@@ -1,5 +1,6 @@
 import BANNER_PHOTO from '../assets/images/service-banner.jpg';
 import HeadingBanner from '../Components/headingBanner.tsx';
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 import "tailwindcss";
@@ -166,7 +167,11 @@ export default function Page ()
 					<div className="service-container my-8">
 						<Services />
 					</div>
+					
+					
 				</div>
+				
+				<Link to="/contact"><button type="button" id="get-in-touch" className="transition delay-50 duration-300 ease-in-out hover:scale-110">BOOK AN APPOINTMENT</button></Link>
 
 			</div>
 		</>

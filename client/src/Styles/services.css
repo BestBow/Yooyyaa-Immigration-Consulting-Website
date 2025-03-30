@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "./variables.css";
+@import "./global.css";
 
 h2.service-title {
 	@apply text-2xl font-bold text-center text-white
@@ -6,5 +8,9 @@ h2.service-title {
 
 p {
 	@apply text-[#5B6385] font-medium text-[24px]
+}
+
+button {
+	@apply text-xl px-8 py-5 font-bold
 }
 
