@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/* NAVBAR */
+.header {
+  /* On mobile, flex-column with centered items; on md+ screens, flex-row */
+  @apply bg-blue-900 text-white w-full py-4 px-8 flex flex-col md:flex-row items-center justify-between shadow-md;
+}
+
+.logo-container {
+  /* Logo and title in a row; full width on mobile so they have space */
+  @apply flex items-center space-x-3 w-full md:w-auto;
+}
+
+.logo {
+  /* Preserve original logo size */
+  @apply h-16;
+}
+
+.title {
+  /* On mobile, slightly smaller text; yellow to match the header button */
+  @apply text-base md:text-lg font-bold uppercase tracking-wide text-yellow-400;
+}
+
+.nav {
+  /* Flex container with centered items; ensures all nav links (including the button) align on the same line */
+  @apply flex flex-wrap items-center justify-center space-x-4 md:space-x-8 text-xs md:text-sm uppercase;
+}
+
+.nav a {
+  /* All nav links bold and white by default, with a hover effect */
+  @apply text-white font-bold hover:text-yellow-400 transition-colors;
+}
+
+/* Specific override for contact button inside nav */
+.nav .contact-btn {
+  @apply text-blue-900 font-bold;
+}
+
+.contact-btn {
+  /* CTA button with yellow background and blue text */
+  @apply bg-yellow-400 px-6 py-2 rounded-lg font-bold hover:bg-yellow-300 transition;
+}

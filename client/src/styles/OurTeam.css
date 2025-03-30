@@ -1,0 +1,192 @@
+@import "./variables.css";
+@import "./global.css";
+
+*:is(h1, h2, h3, h4, h5, h6) {
+    color: var(--dark-blue);
+    font-weight: bolder;
+}
+
+.container { 
+    width: 100vw;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+
+    .gradient {
+        width: 100vw;
+        height: 30vw;
+        position: absolute;
+        /* change 100 to 80 */
+        background-image: linear-gradient(to bottom, var(--dark-blue), 100%, transparent);
+        opacity: 60%;
+    }
+
+    .hero {
+        width: 100vw;
+        height: 30vw;
+        background-image: url("../Assets/meeting.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 100% 50%;
+        color: var(--yellow);
+
+        h1, h3 {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            z-index: 10;
+            text-shadow: 0px 1px 7px gray;
+        }
+         
+        > p {
+            color: var(--yellow);
+        }
+    }
+
+    .mission-vision {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 30px;
+        text-align: left;
+        h2, h3, h5 {
+            color: var(--dark-blue);
+            font-weight: 900;
+        }
+
+        p {
+            font-size: small;
+        }
+    }
+
+    .meet-our-experts {
+        margin-top: 50px;
+        padding: 20px 50px;
+        .experts {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 30px;
+            .expert {
+                margin: 20px;
+                width: 1500;
+
+                img {
+                    margin-top: 25px;
+                    border-radius: 10%;
+                    width: 400px;
+                    height: 450px;
+                    object-fit: cover;
+                }
+                p {
+                    padding: 10px;
+                }
+            }
+        }
+
+        
+    }
+    .connect{
+        
+        button {
+            width: 250px;
+            height: 60px;
+            font-size: 20px;
+            font-weight: 900;
+        }
+    }
+}
+.reasons .icon {
+    color: #2563EB !important;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 450px) {
+    .container { 
+        width: 100%;
+        position: relative;
+        text-align: center;
+    
+        .hero {
+            width: 100vw;
+            height: 75vw;
+            background-image: url("../Assets/meeting.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 100% 50%;
+            color: var(--yellow);
+    
+            h1, h2 {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+            }
+             
+            > p {
+                color: var(--yellow);
+            }
+        }
+    
+        .company {
+            display: grid;
+            margin-top: 30px;
+            h2, h3, h5 {
+                color: var(--dark-blue);
+            }
+
+            h3 {
+                font-size: 30px;
+                font-weight: 900;
+            }
+            
+            .mission-vision {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+            }
+        }
+    
+        .meet-our-experts {
+            .experts {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-row: auto auto;
+                gap: 30px;
+                .expert {
+                    border: 10px;
+                    border-style: solid;
+                    border-color: var(--dark-blue);
+                    border-radius: 10%;
+                    background-color: var(--grey);
+                    margin: 20px;
+    
+                    img {
+                        margin-top: 25px;
+                        border-radius: 50%;
+                        width: 200px;
+                        height: 200px;
+                        object-fit: cover;
+                    }
+                    p {
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+
+        .why-us {
+            font-size: 40px;
+            font-weight: bolder;
+        }
+
+        .connect{
+            .ready {
+                color: #000000;
+            }
+            
+            #get-in-touch {
+                width: 250px;
+                height: 75px;
+                font-size: 30px;
+                font-weight: 900;
+            }
+        }
+    }
+}

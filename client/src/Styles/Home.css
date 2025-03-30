@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* Hero Section */
+.hero-section {
+  @apply text-center py-24 bg-gradient-to-b from-blue-900 to-white relative;
+}
+
+.hero-section h1 {
+  @apply text-yellow-400 text-6xl font-extrabold;
+  position: relative;
+  top: 20px;
+}
+
+/* Services Section */
+.services-title {
+  @apply text-3xl font-bold text-blue-900 text-center mt-8;
+}
+
+.services-divider {
+  @apply w-11/12 h-1 bg-yellow-400 mx-auto my-4;
+}
+
+.services-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6 px-8;
+}
+
+.service-card {
+  @apply bg-white shadow-md rounded-lg overflow-hidden relative transition transform hover:scale-105;
+}
+
+.service-card img {
+  @apply w-full h-48 object-cover brightness-90;
+}
+
+.service-card h3 {
+  @apply absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-2xl font-bold;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  @apply bg-gray-100 py-16;
+}
+
+.testimonial-card {
+  @apply bg-white p-6 rounded-lg shadow-md text-center w-3/4 mx-auto;
+}
+
+/* CTA Section */
+.cta-section {
+  @apply text-center py-16 px-6 bg-gradient-to-b from-blue-900 to-white;
+}
+
+.cta-section h3 {
+  @apply text-3xl font-bold text-white;
+}
+
+.cta-section p{
+  @apply text-white;
+}
+
+.cta-section img {
+  @apply w-10/12 max-h-80 object-cover rounded-lg shadow-lg mx-auto;
+}
+
+.cta-text {
+  @apply absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white text-4xl font-bold;
+}
+
+/* Footer */
+.footer {
+  @apply bg-blue-900 text-white py-8 text-center;
+}
+
+.footer-links {
+  @apply text-yellow-400 font-semibold space-x-6;
+}
+
+.footer-contact {
+  @apply flex flex-col space-y-3;
+}

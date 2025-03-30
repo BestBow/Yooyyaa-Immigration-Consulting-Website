@@ -3,6 +3,19 @@
 # This specific template is located at:
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/npm.gitlab-ci.yml
 
+stages:
+  - test
+  - deploy
+
+lintTest:
+  stage: test
+  image: node:latest
+  script:
+  - npm ci
+  - npm run lint
+  rules:
+    - when: always
+
 publish:
   image: node:latest
   stage: deploy
