@@ -33,7 +33,7 @@ function ServiceAnchorLinks ()
 	return Object.entries( serviceFiles ).map(
 		( [i, service ], index ) => 
 		{
-			const isLastItem = index === Object.entries(serviceFiles).length - 1;
+			console.log( i );
 			return (
 				<a
 					key={ index }
@@ -60,6 +60,7 @@ function Services ()
 	return Object.entries( serviceFiles ).map(
 		( [i, service ], index ) =>
 		{
+			console.log( i );
 			if ( isMobile )
 			{
 				// Mobile layout with dropdown
