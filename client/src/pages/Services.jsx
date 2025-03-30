@@ -10,6 +10,9 @@ import '../styles/services.css';
 const serviceFiles = import.meta.glob( '../assets/service-descriptions/*.json', { eager: true } );
 const MOBILE_BREAKPOINT = 768;
 
+const BANNER_TITLE = "SERVICES OFFERED";
+const BANNER_SUBTITLE = "Explore our range of services tailored to meet your needs!";
+
 // Track viewport width
 function useWindowWidth ()
 {
@@ -150,7 +153,7 @@ export default function Page ()
 			<div className="container mx-15 flex flex-col">
 
 				{/* Heading banner */ }
-				{ HeadingBanner( "SERVICES<br/>OFFERED", null, BANNER_PHOTO ) }
+				{ HeadingBanner( BANNER_TITLE, BANNER_SUBTITLE, BANNER_PHOTO ) }
 
 
 				{/* Horizontal line */ }
