@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+h2.service-title {
+	@apply text-2xl font-bold text-center text-white
+}
+
 p {
 	@apply text-[#5B6385] font-medium text-[24px]
 }
+

@@ -3,7 +3,7 @@ const DEFAULT_BANNER_PHOTO = 'https://4kwallpapers.com/images/walls/thumbs_3t/39
 
 export default function HeadingBanner(title: string | TrustedHTML, subtitle?: string | TrustedHTML, bannerPhoto?: string) {
   return (
-    <div className="w-full relative flex flex-col items-center mb-30">
+    <div className="w-full max-w-dvw relative flex flex-col items-center mb-30">
       <div className="w-screen absolute left-1/2 transform -translate-x-1/2">
         <img
           src={bannerPhoto != null ? bannerPhoto : DEFAULT_BANNER_PHOTO}

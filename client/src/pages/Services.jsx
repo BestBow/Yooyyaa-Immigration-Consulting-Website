@@ -3,6 +3,7 @@ import HeadingBanner from '../Components/headingBanner.tsx';
 import { useState, useEffect } from 'react';
 
 import "tailwindcss";
+import "../styles/global.css";
 import '../styles/services.css';
 
 const serviceFiles = import.meta.glob( '../assets/service-descriptions/*.json', { eager: true } );
@@ -33,9 +34,14 @@ function ServiceAnchorLinks ()
 				<a
 					key={ index }
 					href={ `#${ service.title }` }
-					className="text-lg"
+					className={`
+						text-lg text-black bg-[#f8d97b4e]
+						
+						hover:text-black hover:bg-[#f8d87b] transition duration-300
+						rounded-md mx-2 px-4 py-2 
+					`}
 				>
-					{ service.title }{ !isLastItem && <>&ensp;|&ensp;</> }
+					{ service.title }
 				</a>
 			);
 		}
@@ -83,7 +89,7 @@ function Services ()
 								transform translate-y-1/2 z-10
 								rounded-b-xl
 							">
-								<h2 className="text-2xl font-bold text-center text-white">
+								<h2 className="service-title">
 									{ service.title }
 								</h2>
 							</div>
@@ -116,7 +122,7 @@ function Services ()
 								transform translate-y-1/2 z-10;
 								rounded-b-xl
 							">
-								<h2 className="text-2xl font-bold text-center text-white">
+								<h2 className="service-title ">
 									{ service.title }
 								</h2>
 							</div>
@@ -140,7 +146,7 @@ export default function Page ()
 
 	return (
 		<>
-			<div className="container mx-auto flex flex-col">
+			<div className="container mx-15 flex flex-col">
 
 				{/* Heading banner */ }
 				{ HeadingBanner( "SERVICES<br/>OFFERED", null, BANNER_PHOTO ) }
@@ -151,7 +157,7 @@ export default function Page ()
 
 				<span className="horizontal-line m-5"></span>
 
-				<div className="max-w-[90%] mx-auto">
+				<div className="max-w-full mx-auto">
 
 					{/* Only show service anchors on desktop */ }
 					{ !isMobile && <div className="text-center"><ServiceAnchorLinks /></div> }
