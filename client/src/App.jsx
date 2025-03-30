@@ -12,6 +12,7 @@ import FAQ from "./pages/FAQ";
 import TermsandPrivacyPolicy from "./Components/termsAndPrivacyPolicy";
 import AdminLanding from "./pages/AdminLanding";
 import Login from "./pages/Login";
+import PrivateRoute from "./pages/PrivateRoute";
 
 function App() {
   return (
@@ -25,7 +26,11 @@ function App() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/termsAndPrivacy" element={<TermsandPrivacyPolicy />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/adminLanding" element={<AdminLanding/>}/>
+        
+        <Route element={<PrivateRoute />}>
+          <Route path="/adminLanding" element={<AdminLanding />} />
+        </Route>
+
       </Routes>
       <Footer />
     </Router>

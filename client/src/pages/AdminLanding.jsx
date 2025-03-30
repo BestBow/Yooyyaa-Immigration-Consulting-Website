@@ -5,6 +5,7 @@ import "../styles/global.css";
 import servicesIcon from "../Assets/images/services.png";
 import faqIcon from "../Assets/images/FAQ.png";
 import aboutUsIcon from "../Assets/images/aboutUs.png";
+import Logout from "./Logout";
 
 const AdminLanding = () => {
   const [visibleDropdown, setVisibleDropdown] = useState(null);
@@ -66,7 +67,11 @@ const AdminLanding = () => {
           </div>
         ))}
       </div>
+      <Logout />
     </div>
+
+
+
   );
 };
 

@@ -32,6 +32,7 @@ function Login() {
     }
 
     else if (userName === "admin" && password === "password") {
+      localStorage.setItem("token",true);
       setIsAuthenticated(true);
     }
   };
