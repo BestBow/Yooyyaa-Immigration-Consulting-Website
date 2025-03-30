@@ -44,6 +44,13 @@ span.horizontal-line {
 	@apply block h-1 w-[90%] bg-[#FFC700] self-center;
 }
 
+.heading-banner-h1 {
+  @apply text-[90px] uppercase text-yellow-400;
+}
+
+.heading-banner-h2 {
+  @apply text-[24px] text-yellow-400;
+}
 
 /**Tablet-breakpoints **/
 @media (min-width: 768px) and (max-width: 992px) {

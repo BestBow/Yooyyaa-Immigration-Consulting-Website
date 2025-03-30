@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../styles/global.css"; 
-import styles from "../styles/Contact.module.css";
+import "../styles/global.css";
+import "../styles/Contact.css";
 import HeadingBanner from "../Components/headingBanner.tsx";
 import Backgroundimg from "../Assets/images/image.png";
 import logoWname from "../Assets/images/yooyyaa.png";
@@ -54,105 +54,111 @@ function Contact() {
   };
 
   return (
-    <div className={styles.container}>
+    <div className="contact-container">
       {/* Use the HeadingBanner component for the banner */}
       {HeadingBanner("GET IN TOUCH", Backgroundimg)}
 
-      {/* Section Title */}
-      <h3 className={styles.sectionTitle}>WE ARE HERE TO HELP</h3>
-      <div className="w-full flex justify-center">
-        <span className="horizontal-line"></span>
-      </div>
-
-      {/* Form Section */}
-      <section className={styles.formSection}>
-        <div className={styles.formText}>
-          <p className={styles.text}>
-            Immigration process can be hectic.{" "}
-            <strong>WE ARE HERE TO MAKE IT EASY.</strong>
-          </p>
-          <p className={styles.description}>
-            Let us know how we can help, and we will get back to you in 24 hours!
-          </p>
-        </div>
-
-        {/* Our form with onSubmit and onChange handlers */}
-        <form className={styles.form} onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="NAME"
-            value={formData.name}
-            onChange={handleChange}
-            className={styles.input}
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="EMAIL"
-            value={formData.email}
-            onChange={handleChange}
-            className={styles.input}
-          />
-          <input
-            type="text"
-            name="phone"
-            placeholder="PHONE NUMBER (OPTIONAL)"
-            value={formData.phone}
-            onChange={handleChange}
-            className={styles.input}
-          />
-          <select
-            name="category"
-            value={formData.category}
-            onChange={handleChange}
-            className={styles.input}
-          >
-            <option value="">CATEGORY</option>
-            <option value="Visa Consultation">Visa Consultation</option>
-            <option value="Work Permit">Work Permit</option>
-            <option value="Study Permit">Study Permit</option>
-          </select>
-          <textarea
-            name="message"
-            placeholder="SEND US A MESSAGE! (MAX 999 CHARACTERS)"
-            value={formData.message}
-            onChange={handleChange}
-            className={styles.textarea}
-          />
-          <button type="submit" className={styles.submitBtn}>
-            SUBMIT
-          </button>
-        </form>
-      </section>
-
-      {/* Contact Info Section */}
-      <section className={styles.infoSection}>
-        <h3 className={styles.otherWaysTitle}>OTHER WAYS TO FIND US</h3>
-        <div className="w-full flex justify-center">
+      {/* HELP SECTION BOX */}
+      <div className="help-section">
+        {/* Section Title */}
+        <h3 className="section-title">WE ARE HERE TO HELP</h3>
+        <div className="line-container">
           <span className="horizontal-line"></span>
         </div>
 
-        <div className={styles.infoContainer}>
-          <img src={logoWname} alt="Yooyaa Logo" className={styles.infoLogo} />
-          <div className={styles.contactDetails}>
+        {/* Form Section */}
+        <section className="form-section">
+          <div className="form-text">
+            <p className="text">
+              Immigration process can be hectic.{" "}
+              <strong>WE ARE HERE TO MAKE IT EASY.</strong>
+            </p>
+            <p className="description">
+              Let us know how we can help, and we will get back to you in 24 hours!
+            </p>
+          </div>
+
+          {/* Our form with onSubmit and onChange handlers */}
+          <form className="form" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              placeholder="NAME"
+              value={formData.name}
+              onChange={handleChange}
+              className="input"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="EMAIL"
+              value={formData.email}
+              onChange={handleChange}
+              className="input"
+            />
+            <input
+              type="text"
+              name="phone"
+              placeholder="PHONE NUMBER (OPTIONAL)"
+              value={formData.phone}
+              onChange={handleChange}
+              className="input"
+            />
+            <select
+              name="category"
+              value={formData.category}
+              onChange={handleChange}
+              className="input"
+            >
+              <option value="">CATEGORY</option>
+              <option value="Visa Consultation">Visa Consultation</option>
+              <option value="Work Permit">Work Permit</option>
+              <option value="Study Permit">Study Permit</option>
+            </select>
+            <textarea
+              name="message"
+              placeholder="SEND US A MESSAGE! (MAX 999 CHARACTERS)"
+              value={formData.message}
+              onChange={handleChange}
+              className="textarea"
+            />
+            <button type="submit" className="submit-btn">
+              SUBMIT
+            </button>
+          </form>
+        </section>
+      </div>
+
+      {/* Contact Info Section */}
+      <section className="info-section">
+        <h3 className="other-ways-title">OTHER WAYS TO FIND US</h3>
+        <div className="line-container">
+          <span className="horizontal-line"></span>
+        </div>
+
+        <div className="info-container">
+          <img src={logoWname} alt="Yooyaa Logo" className="info-logo" />
+          <div className="contact-details">
             <p>
-              PHONE: <span className={styles.highlight}>+1 902-123-4567</span>
+              PHONE: <span className="highlight">+1 902-123-4567</span>
             </p>
             <p>
-              EMAIL: <span className={styles.highlight}>something@gmail.com</span>
+              EMAIL: <span className="highlight">something@gmail.com</span>
             </p>
             <p>
-              ADDRESS: <span className={styles.highlight}>123 Imaginary St, Halifax, NS B1H 1Z0</span>
+              ADDRESS:{" "}
+              <span className="highlight">
+                123 Imaginary St, Halifax, NS B1H 1Z0
+              </span>
             </p>
           </div>
         </div>
 
         {/* Map Section */}
-        <div className={styles.mapContainer}>
+        <div className="map-container">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2812.511495218882!2d-63.583927!3d44.636566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5a22d7746d9c95%3A0x10f28b1e7dfd8c9b!2sDalhousie%20University!5e0!3m2!1sen!2sca!4v1633490141765!5m2!1sen!2sca"
-            className={styles.mapEmbed}
+            className="map-embed"
             allowFullScreen=""
             loading="lazy"
             title="Map"
