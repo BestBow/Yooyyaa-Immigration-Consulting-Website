@@ -1,6 +1,6 @@
 import React from "react";
 import { FaComments, FaLightbulb, FaSearch, FaUserTie, FaCheckCircle } from "react-icons/fa";
-import BANNER_PHOTO from '../assets/images/service-banner.jpg';
+import HomepageBanner from '../assets/images/homePage.jpg';
 import HeadingBanner from '../Components/headingBanner.tsx';
 import { Link } from "react-router-dom";
 import serviceImage from "../assets/Green-Valley.jpg";
@@ -15,17 +15,17 @@ const services = [
 ];
 
 const processSteps = [
-  { title: "Outreach", description: "Connect with us", icon: <FaComments style={{ color: "#194487" }} className="text-5xl" /> },
-  { title: "Strategize", description: "We craft a personalized plan", icon: <FaLightbulb style={{ color: "#194487" }} className="text-5xl" /> },
-  { title: "Case Revision", description: "Thorough review of your case", icon: <FaSearch style={{ color: "#194487" }} className="text-5xl" /> },
-  { title: "Representation", description: "We handle all government communication", icon: <FaUserTie style={{ color: "#194487" }} className="text-5xl" /> },
-  { title: "Decision", description: "Achieve your immigration goals", icon: <FaCheckCircle style={{ color: "#194487" }} className="text-5xl" /> },
+  { title: "Outreach", description: "Connect with us", icon: <FaComments className="text-3xl md:text-4xl text-blue-800" /> },
+  { title: "Strategize", description: "We craft a personalized plan", icon: <FaLightbulb className="text-3xl md:text-4xl text-blue-800" /> },
+  { title: "Case Revision", description: "Thorough review of your case", icon: <FaSearch className="text-3xl md:text-4xl text-blue-800" /> },
+  { title: "Representation", description: "We handle all government communication", icon: <FaUserTie className="text-3xl md:text-4xl text-blue-800" /> },
+  { title: "Decision", description: "Achieve your immigration goals", icon: <FaCheckCircle className="text-3xl md:text-4xl text-blue-800" /> },
 ];
 
 const Homepage = () => {
   return (
     <div>
-      { HeadingBanner( "YOOYYAA IMMIGRATION", BANNER_PHOTO ) }
+      { HeadingBanner( "YOOYYAA IMMIGRATION", null, HomepageBanner ) }
 
       {/* Services Section */}
       <section className="text-center py-16">
@@ -42,20 +42,20 @@ const Homepage = () => {
       </section>
 
       {/* Understand our Process */}
-<section className="text-center py-16 bg-white">
-  <h2 className="text-3xl font-bold text-gray-900 underline decoration-yellow-600 decoration-4 underline-offset-4">
-    Understand our Process
-  </h2>
-  <div className="grid grid-cols-1 md:grid-cols-5 gap-6 px-4 mt-12"> 
-    {processSteps.map((step, index) => (
-      <div key={index} className="flex flex-col items-center">
-        {step.icon}
-        <h3 className="text-base font-semibold text-red-600 mt-2 whitespace-nowrap">{`${index + 1}. ${step.title}`}</h3> {/* Reduced font size and added nowrap */}
-        <p className="text-sm text-gray-700 mt-1">{step.description}</p> 
-      </div>
-    ))}
-  </div>
-</section>
+      <section className="text-center py-16 bg-white w-full">
+        <h2 className="text-3xl font-bold text-gray-900 underline decoration-yellow-400 decoration-4 underline-offset-4">
+          Understand our Process
+        </h2>
+        <div className="process-steps-container mt-14">
+          {processSteps.map((step, index) => (
+            <div key={index} className="process-step">
+              {step.icon}
+              <h3 className="text-sm sm:text-base font-semibold text-red-600">{`${index + 1}. ${step.title}`}</h3>
+              <p className="text-xs sm:text-sm text-gray-700">{step.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="cta-section">
