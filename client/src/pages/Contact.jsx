@@ -56,8 +56,7 @@ function Contact() {
   return (
     <div className="contact-container">
       {/* Use the HeadingBanner component for the banner */}
-      {HeadingBanner("GET IN TOUCH", Backgroundimg)}
-
+      {HeadingBanner("GET IN TOUCH", "", Backgroundimg)}
       {/* HELP SECTION BOX */}
       <div className="help-section">
         {/* Section Title */}

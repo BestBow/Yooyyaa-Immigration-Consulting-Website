@@ -1,5 +1,5 @@
 import React from 'react';
-import boathouse from '../Assets/boathouse.jpg'
+import boathouse from '../Assets/boathouse.jpg';
 import "tailwindcss";
 import "../Styles/global.css"
 import styles from "../Styles/FAQ.module.css"
@@ -38,7 +38,7 @@ return (
   
     <div className="flex flex-col justify-center w-full px-4">
       <div className="faq-title flex justify-center text-center relative mb-20">
-      {HeadingBanner("Frequently Asked Questions", boathouse)} {/* Pass props here */}
+      {HeadingBanner("Frequently Asked Questions", "", boathouse)}{/* Pass props here */}
         {/* <h1>Frequently Asked Questions</h1> */}
           {/* <span className="absolute inset-0 bg-gradient-to-b from-[#001F3F] to-transparent z-1"></span> */}
         </div>
