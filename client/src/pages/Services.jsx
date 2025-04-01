@@ -7,7 +7,7 @@ import "tailwindcss";
 import "../styles/global.css";
 import '../styles/services.css';
 
-const serviceFiles = import.meta.glob( '../assets/service-descriptions/*.json', { eager: true } );
+const serviceFiles = import.meta.glob( '../assets/service-descriptions/*.json', { eager: true } ); // note that the file extension must end in .json, name does not matter.
 const MOBILE_BREAKPOINT = 768;
 
 const BANNER_TITLE = "SERVICES OFFERED";
@@ -105,7 +105,9 @@ function Services ()
 							id={ `dropdown-${ service.title.replace( /\s+/g, '-' ) }` }
 							className="mt-8 p-4 border border-[#003580] rounded-xl hidden transition-all duration-300"
 						>
-							<p className="text-lg">{ service.description }</p>
+							<p className="text-lg text-left" dangerouslySetInnerHTML={
+								{ __html: service.description }
+							} />
 						</div>
 					</section>
 				);
@@ -134,8 +136,10 @@ function Services ()
 						</div>
 
 						{/* Right column: Description */ }
-						<div className="flex items-top ml-5">
-							<p className="text-lg">{ service.description }</p>
+						<div className="flex items-top ml-5 text-left my-10">
+							<p className="text-lg text-left" dangerouslySetInnerHTML={
+								{ __html: service.description }
+							} />
 						</div>
 					</section>
 				);
