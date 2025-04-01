@@ -1,7 +1,11 @@
 import React from "react";
+import { FaComments, FaLightbulb, FaSearch, FaUserTie, FaCheckCircle } from "react-icons/fa";
+import HomepageBanner from '../assets/images/homePage.jpg';
+import HeadingBanner from '../Components/headingBanner.tsx';
+import { Link } from "react-router-dom";
+import serviceImage from "../assets/Green-Valley.jpg";
 import "../styles/global.css";
 import "../styles/Home.css";
-import serviceImage from "../assets/Green-Valley.jpg";
 
 const services = [
   { name: "SERVICE 1", image: serviceImage },
@@ -11,20 +15,17 @@ const services = [
 ];
 
 const processSteps = [
-  { title: "Outreach", description: "Connect with us", icon: "💬" },
-  { title: "Strategize", description: "We craft a personalized plan", icon: "💡" },
-  { title: "Case Revision", description: "Thorough review of your case", icon: "🔍" },
-  { title: "Representation", description: "We handle all government communication", icon: "👨‍⚖️" },
-  { title: "Decision", description: "Achieve your immigration goals", icon: "✅" },
+  { title: "Outreach", description: "Connect with us", icon: <FaComments className="text-3xl md:text-4xl text-blue-800" /> },
+  { title: "Strategize", description: "We craft a personalized plan", icon: <FaLightbulb className="text-3xl md:text-4xl text-blue-800" /> },
+  { title: "Case Revision", description: "Thorough review of your case", icon: <FaSearch className="text-3xl md:text-4xl text-blue-800" /> },
+  { title: "Representation", description: "We handle all government communication", icon: <FaUserTie className="text-3xl md:text-4xl text-blue-800" /> },
+  { title: "Decision", description: "Achieve your immigration goals", icon: <FaCheckCircle className="text-3xl md:text-4xl text-blue-800" /> },
 ];
 
 const Homepage = () => {
   return (
     <div>
-      {/* Hero Section */}
-      <section className="hero-section">
-        <h1>Home</h1>
-      </section>
+      { HeadingBanner( "YOOYYAA IMMIGRATION", null, HomepageBanner ) }
 
       {/* Services Section */}
       <section className="text-center py-16">
@@ -40,21 +41,17 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* Understand our process*/}
-      <section className="process-section text-center py-16 bg-gray-100">
-        <h2 className="text-4xl font-bold text-blue-900 mb-6">Understand Our Process</h2>
-        <div className="services-divider mx-auto mb-8"></div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 px-6">
+      {/* Understand our Process */}
+      <section className="text-center py-16 bg-white w-full">
+        <h2 className="text-3xl font-bold text-gray-900 underline decoration-yellow-400 decoration-4 underline-offset-4">
+          Understand our Process
+        </h2>
+        <div className="process-steps-container mt-14">
           {processSteps.map((step, index) => (
-            <div 
-              key={index} 
-              className="process-card flex flex-col items-center justify-between text-center p-6 bg-white rounded-lg shadow-md transition-transform transform hover:scale-105"
-            >
-              <div> 
-                <div className="text-5xl mb-3">{step.icon}</div>
-                <h3 className="text-lg font-semibold text-blue-900 break-words" style={{ wordBreak: 'break-word' }}>{`${index + 1}. ${step.title}`}</h3>
-              </div>
-              <p className="text-gray-700 mt-2 text-sm leading-snug">{step.description}</p>
+            <div key={index} className="process-step">
+              {step.icon}
+              <h3 className="text-sm sm:text-base font-semibold text-red-600">{`${index + 1}. ${step.title}`}</h3>
+              <p className="text-xs sm:text-sm text-gray-700">{step.description}</p>
             </div>
           ))}
         </div>
@@ -65,8 +62,10 @@ const Homepage = () => {
         <h3>THINKING ABOUT COMING TO CANADA?</h3>
         <p className="text-lg text-white my-4">LET US KNOW HOW WE CAN HELP!</p>
         <div className="relative mt-6 w-full max-w-[75%] mx-auto">
-          <img src={serviceImage} alt="Talk to us" />
-          <span className="cta-text">TALK TO US TODAY</span>
+          <Link to="/contact">
+            <img src={serviceImage} alt="Talk to us" />
+            <span className="cta-text">TALK TO US TODAY</span>
+          </Link>
         </div>
       </section>
     </div>

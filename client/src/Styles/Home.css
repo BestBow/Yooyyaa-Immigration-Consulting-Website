@@ -36,13 +36,46 @@
   @apply absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-2xl font-bold;
 }
 
-/* Testimonials Section */
-.testimonials-section {
-  @apply bg-gray-100 py-16;
+/* Process Steps Container */
+.process-steps-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: center; /* Centers items properly */
+  gap: 20px; /* More spacing between steps */
+  width: 100%; /* Ensures it fills the container */
 }
 
-.testimonial-card {
-  @apply bg-white p-6 rounded-lg shadow-md text-center w-3/4 mx-auto;
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1 1 18%; /* Ensures equal spacing and allows wrapping */
+  min-width: 180px; /* Prevents items from shrinking too much */
+  max-width: 240px; /* Controls width on larger screens */
+}
+
+.process-step h3 {
+  font-size: 1.25rem; /* Increased for better readability */
+}
+
+.process-step p {
+  font-size: 1rem; /* Improved text visibility */
+}
+
+/* Responsive Design: Stacks on Small Screens */
+@media (max-width: 768px) {
+  .process-step {
+    flex: 1 1 100%; /* Full width on smaller screens */
+  }
+
+  .process-step h3 {
+    font-size: 1.125rem; /* Adjusted for readability */
+  }
+
+  .process-step p {
+    font-size: 1rem; /* Consistent text size */
+  }
 }
 
 /* CTA Section */
@@ -52,6 +85,10 @@
 
 .cta-section h3 {
   @apply text-3xl font-bold text-white;
+}
+
+.cta-section p {
+  @apply text-white;
 }
 
 .cta-section img {

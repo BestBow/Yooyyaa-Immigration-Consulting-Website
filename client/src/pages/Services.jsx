@@ -1,12 +1,17 @@
-import BANNER_PHOTO from '../assets/service-banner.jpg';
+import BANNER_PHOTO from '../assets/images/service-banner.jpg';
 import HeadingBanner from '../Components/headingBanner.tsx';
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 import "tailwindcss";
-import '../styles/global.css';
+import "../styles/global.css";
+import '../styles/services.css';
 
 const serviceFiles = import.meta.glob( '../assets/service-descriptions/*.json', { eager: true } );
 const MOBILE_BREAKPOINT = 768;
+
+const BANNER_TITLE = "SERVICES OFFERED";
+const BANNER_SUBTITLE = "Explore our range of services tailored to meet your needs!";
 
 // Track viewport width
 function useWindowWidth ()
@@ -26,16 +31,21 @@ function useWindowWidth ()
 function ServiceAnchorLinks ()
 {
 	return Object.entries( serviceFiles ).map(
-		( [service ], index ) => 
+		( [i, service ], index ) => 
 		{
-			const isLastItem = index === Object.entries(serviceFiles).length - 1;
+			console.log( i );
 			return (
 				<a
 					key={ index }
 					href={ `#${ service.title }` }
-					className="text-lg"
+					className={`
+						text-lg text-black bg-[#f8d97b4e]
+						
+						hover:text-black hover:bg-[#f8d87b] transition duration-300
+						rounded-md mx-2 px-4 py-2 
+					`}
 				>
-					{ service.title }{ !isLastItem && <>&ensp;|&ensp;</> }
+					{ service.title }
 				</a>
 			);
 		}
@@ -48,8 +58,9 @@ function Services ()
 	const isMobile = windowWidth < MOBILE_BREAKPOINT;
 
 	return Object.entries( serviceFiles ).map(
-		( [service ], index ) =>
+		( [i, service ], index ) =>
 		{
+			console.log( i );
 			if ( isMobile )
 			{
 				// Mobile layout with dropdown
@@ -83,7 +94,7 @@ function Services ()
 								transform translate-y-1/2 z-10
 								rounded-b-xl
 							">
-								<h2 className="text-2xl font-bold text-center text-white">
+								<h2 className="service-title">
 									{ service.title }
 								</h2>
 							</div>
@@ -99,7 +110,7 @@ function Services ()
 					</section>
 				);
 			} else
-{
+			{
 				// Desktop layout with grid
 				return (
 					<section key={ index } id={ service.title } className="grid grid-cols-2 gap-6 mb-10">
@@ -116,7 +127,7 @@ function Services ()
 								transform translate-y-1/2 z-10;
 								rounded-b-xl
 							">
-								<h2 className="text-2xl font-bold text-center text-white">
+								<h2 className="service-title ">
 									{ service.title }
 								</h2>
 							</div>
@@ -140,10 +151,10 @@ export default function Page ()
 
 	return (
 		<>
-			<div className="container mx-auto flex flex-col">
+			<div className="container mx-15 flex flex-col">
 
 				{/* Heading banner */ }
-				{ HeadingBanner( "SERVICES<br/>OFFERED", BANNER_PHOTO ) }
+				{ HeadingBanner( BANNER_TITLE, BANNER_SUBTITLE, BANNER_PHOTO ) }
 
 
 				{/* Horizontal line */ }
@@ -151,7 +162,7 @@ export default function Page ()
 
 				<span className="horizontal-line m-5"></span>
 
-				<div className="max-w-[90%] mx-auto">
+				<div className="max-w-full mx-auto">
 
 					{/* Only show service anchors on desktop */ }
 					{ !isMobile && <div className="text-center"><ServiceAnchorLinks /></div> }
@@ -160,7 +171,11 @@ export default function Page ()
 					<div className="service-container my-8">
 						<Services />
 					</div>
+					
+					
 				</div>
+				
+				<Link to="/contact"><button type="button" id="get-in-touch" className="transition delay-50 duration-300 ease-in-out hover:scale-110">BOOK AN APPOINTMENT</button></Link>
 
 			</div>
 		</>

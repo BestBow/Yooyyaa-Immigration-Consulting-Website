@@ -4,8 +4,12 @@ dotenv.config({ path: './.env' });
 
 import express from "express";
 import cors from "cors";
+
 import bodyParser from "body-parser";
 import nodemailer from "nodemailer";
+
+import formLimiter from "./middleware/rateLimit";
+
 
 const PORT = process.env.PORT || 5050;
 const app = express();
@@ -15,6 +19,11 @@ app.use(cors());
 
 app.use(express.json()); // Built-in parser for JSON bodies
 app.use(bodyParser.json());
+
+
+//Applying rateLimiter on contact form route
+app.use("/api/contact",formLimiter);
+
 
 // Set up Nodemailer transporter using environment variables
 const transporter = nodemailer.createTransport({
