@@ -116,7 +116,7 @@ function AboutUs() {
 
       <div className="connect mb-10 mt-20">
         <h2 className="ready mt-15 mb-10 text-3xl">
-          Ready to start your journey? Let's make it happen!
+          Ready to start your journey? Let&apos;s make it happen!
         </h2>
         <Link to="/contact">
           <button
