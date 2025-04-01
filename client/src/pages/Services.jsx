@@ -105,7 +105,9 @@ function Services ()
 							id={ `dropdown-${ service.title.replace( /\s+/g, '-' ) }` }
 							className="mt-8 p-4 border border-[#003580] rounded-xl hidden transition-all duration-300"
 						>
-							<p className="text-lg text-left">{ service.description }</p>
+							<p className="text-lg text-left" dangerouslySetInnerHTML={
+								{ __html: service.description }
+							} />
 						</div>
 					</section>
 				);
@@ -135,7 +137,9 @@ function Services ()
 
 						{/* Right column: Description */ }
 						<div className="flex items-top ml-5 text-left my-10">
-							<p className="text-lg">{ service.description }</p>
+							<p className="text-lg text-left" dangerouslySetInnerHTML={
+								{ __html: service.description }
+							} />
 						</div>
 					</section>
 				);
