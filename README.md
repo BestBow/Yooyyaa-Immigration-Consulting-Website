@@ -4,7 +4,7 @@ This project is a fully structured and responsive website designed for **Yooyyaa
 
 ## Overview
 
-I designed and developed this website as a solo developer using the **MERN stack** (MongoDB, Express.js, React.js, Node.js). The site includes:
+Designed and developed this website using the **MERN stack** (MongoDB, Express.js, React.js, Node.js). The site includes:
 
 - A dynamic homepage
 - Detailed service pages (study permits, work visas, sponsorships, permanent residency)
