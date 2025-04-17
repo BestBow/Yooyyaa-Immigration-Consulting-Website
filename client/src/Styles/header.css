@@ -40,3 +40,55 @@
   /* CTA button with yellow background and blue text */
   @apply bg-yellow-400 px-6 py-2 rounded-lg font-bold hover:bg-yellow-300 transition;
 }
+
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 1080px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+    text-align: left;
+    border-radius: 10px;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold; /* Make links bold */
+    padding: 5px 10px; /* Add padding for better clickability */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    text-align: left;
+    margin: 0 auto;
+
+
+  }
+
+  .nav a:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}

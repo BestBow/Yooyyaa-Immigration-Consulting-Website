@@ -29,6 +29,7 @@
         background-size: cover;
         background-position: 100% 50%;
         color: var(--yellow);
+        margin-left: -128px;
 
         h1, h3 {
             display: flex;
